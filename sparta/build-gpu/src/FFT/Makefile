@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Kokkos\" \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -162,6 +162,188 @@ depend:
 	cd /common/home/rvk22/opt/sparta/build-gpu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/FFT/CMakeFiles/pkg_fft.dir/rule:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/FFT/CMakeFiles/pkg_fft.dir/rule
+.PHONY : src/FFT/CMakeFiles/pkg_fft.dir/rule
+
+# Convenience name for target.
+pkg_fft: src/FFT/CMakeFiles/pkg_fft.dir/rule
+.PHONY : pkg_fft
+
+# fast build rule for target.
+pkg_fft/fast:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/build
+.PHONY : pkg_fft/fast
+
+compute_fft_grid.o: compute_fft_grid.cpp.o
+.PHONY : compute_fft_grid.o
+
+# target to build an object file
+compute_fft_grid.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/compute_fft_grid.cpp.o
+.PHONY : compute_fft_grid.cpp.o
+
+compute_fft_grid.i: compute_fft_grid.cpp.i
+.PHONY : compute_fft_grid.i
+
+# target to preprocess a source file
+compute_fft_grid.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/compute_fft_grid.cpp.i
+.PHONY : compute_fft_grid.cpp.i
+
+compute_fft_grid.s: compute_fft_grid.cpp.s
+.PHONY : compute_fft_grid.s
+
+# target to generate assembly for a file
+compute_fft_grid.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/compute_fft_grid.cpp.s
+.PHONY : compute_fft_grid.cpp.s
+
+fft2d.o: fft2d.cpp.o
+.PHONY : fft2d.o
+
+# target to build an object file
+fft2d.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d.cpp.o
+.PHONY : fft2d.cpp.o
+
+fft2d.i: fft2d.cpp.i
+.PHONY : fft2d.i
+
+# target to preprocess a source file
+fft2d.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d.cpp.i
+.PHONY : fft2d.cpp.i
+
+fft2d.s: fft2d.cpp.s
+.PHONY : fft2d.s
+
+# target to generate assembly for a file
+fft2d.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d.cpp.s
+.PHONY : fft2d.cpp.s
+
+fft2d_wrap.o: fft2d_wrap.cpp.o
+.PHONY : fft2d_wrap.o
+
+# target to build an object file
+fft2d_wrap.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d_wrap.cpp.o
+.PHONY : fft2d_wrap.cpp.o
+
+fft2d_wrap.i: fft2d_wrap.cpp.i
+.PHONY : fft2d_wrap.i
+
+# target to preprocess a source file
+fft2d_wrap.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d_wrap.cpp.i
+.PHONY : fft2d_wrap.cpp.i
+
+fft2d_wrap.s: fft2d_wrap.cpp.s
+.PHONY : fft2d_wrap.s
+
+# target to generate assembly for a file
+fft2d_wrap.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft2d_wrap.cpp.s
+.PHONY : fft2d_wrap.cpp.s
+
+fft3d.o: fft3d.cpp.o
+.PHONY : fft3d.o
+
+# target to build an object file
+fft3d.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d.cpp.o
+.PHONY : fft3d.cpp.o
+
+fft3d.i: fft3d.cpp.i
+.PHONY : fft3d.i
+
+# target to preprocess a source file
+fft3d.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d.cpp.i
+.PHONY : fft3d.cpp.i
+
+fft3d.s: fft3d.cpp.s
+.PHONY : fft3d.s
+
+# target to generate assembly for a file
+fft3d.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d.cpp.s
+.PHONY : fft3d.cpp.s
+
+fft3d_wrap.o: fft3d_wrap.cpp.o
+.PHONY : fft3d_wrap.o
+
+# target to build an object file
+fft3d_wrap.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d_wrap.cpp.o
+.PHONY : fft3d_wrap.cpp.o
+
+fft3d_wrap.i: fft3d_wrap.cpp.i
+.PHONY : fft3d_wrap.i
+
+# target to preprocess a source file
+fft3d_wrap.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d_wrap.cpp.i
+.PHONY : fft3d_wrap.cpp.i
+
+fft3d_wrap.s: fft3d_wrap.cpp.s
+.PHONY : fft3d_wrap.s
+
+# target to generate assembly for a file
+fft3d_wrap.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/fft3d_wrap.cpp.s
+.PHONY : fft3d_wrap.cpp.s
+
+remap2d.o: remap2d.cpp.o
+.PHONY : remap2d.o
+
+# target to build an object file
+remap2d.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap2d.cpp.o
+.PHONY : remap2d.cpp.o
+
+remap2d.i: remap2d.cpp.i
+.PHONY : remap2d.i
+
+# target to preprocess a source file
+remap2d.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap2d.cpp.i
+.PHONY : remap2d.cpp.i
+
+remap2d.s: remap2d.cpp.s
+.PHONY : remap2d.s
+
+# target to generate assembly for a file
+remap2d.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap2d.cpp.s
+.PHONY : remap2d.cpp.s
+
+remap3d.o: remap3d.cpp.o
+.PHONY : remap3d.o
+
+# target to build an object file
+remap3d.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap3d.cpp.o
+.PHONY : remap3d.cpp.o
+
+remap3d.i: remap3d.cpp.i
+.PHONY : remap3d.i
+
+# target to preprocess a source file
+remap3d.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap3d.cpp.i
+.PHONY : remap3d.cpp.i
+
+remap3d.s: remap3d.cpp.s
+.PHONY : remap3d.s
+
+# target to generate assembly for a file
+remap3d.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/remap3d.cpp.s
+.PHONY : remap3d.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +356,28 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... pkg_fft"
+	@echo "... compute_fft_grid.o"
+	@echo "... compute_fft_grid.i"
+	@echo "... compute_fft_grid.s"
+	@echo "... fft2d.o"
+	@echo "... fft2d.i"
+	@echo "... fft2d.s"
+	@echo "... fft2d_wrap.o"
+	@echo "... fft2d_wrap.i"
+	@echo "... fft2d_wrap.s"
+	@echo "... fft3d.o"
+	@echo "... fft3d.i"
+	@echo "... fft3d.s"
+	@echo "... fft3d_wrap.o"
+	@echo "... fft3d_wrap.i"
+	@echo "... fft3d_wrap.s"
+	@echo "... remap2d.o"
+	@echo "... remap2d.i"
+	@echo "... remap2d.s"
+	@echo "... remap3d.o"
+	@echo "... remap3d.i"
+	@echo "... remap3d.s"
 .PHONY : help
 
 

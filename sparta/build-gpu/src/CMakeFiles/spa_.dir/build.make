@@ -73,15 +73,15 @@ src/CMakeFiles/spa_.dir/main.cpp.o: src/CMakeFiles/spa_.dir/flags.make
 src/CMakeFiles/spa_.dir/main.cpp.o: /common/home/rvk22/opt/sparta/src/main.cpp
 src/CMakeFiles/spa_.dir/main.cpp.o: src/CMakeFiles/spa_.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/spa_.dir/main.cpp.o"
-	cd /common/home/rvk22/opt/sparta/build-gpu/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/spa_.dir/main.cpp.o -MF CMakeFiles/spa_.dir/main.cpp.o.d -o CMakeFiles/spa_.dir/main.cpp.o -c /common/home/rvk22/opt/sparta/src/main.cpp
+	cd /common/home/rvk22/opt/sparta/build-gpu/src && /common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/spa_.dir/main.cpp.o -MF CMakeFiles/spa_.dir/main.cpp.o.d -o CMakeFiles/spa_.dir/main.cpp.o -c /common/home/rvk22/opt/sparta/src/main.cpp
 
 src/CMakeFiles/spa_.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/spa_.dir/main.cpp.i"
-	cd /common/home/rvk22/opt/sparta/build-gpu/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /common/home/rvk22/opt/sparta/src/main.cpp > CMakeFiles/spa_.dir/main.cpp.i
+	cd /common/home/rvk22/opt/sparta/build-gpu/src && /common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /common/home/rvk22/opt/sparta/src/main.cpp > CMakeFiles/spa_.dir/main.cpp.i
 
 src/CMakeFiles/spa_.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/spa_.dir/main.cpp.s"
-	cd /common/home/rvk22/opt/sparta/build-gpu/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /common/home/rvk22/opt/sparta/src/main.cpp -o CMakeFiles/spa_.dir/main.cpp.s
+	cd /common/home/rvk22/opt/sparta/build-gpu/src && /common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /common/home/rvk22/opt/sparta/src/main.cpp -o CMakeFiles/spa_.dir/main.cpp.s
 
 # Object files for target spa_
 spa__OBJECTS = \
@@ -93,8 +93,15 @@ spa__EXTERNAL_OBJECTS =
 src/spa_: src/CMakeFiles/spa_.dir/main.cpp.o
 src/spa_: src/CMakeFiles/spa_.dir/build.make
 src/spa_: src/libsparta_.a
+src/spa_: src/FFT/libpkg_fft.a
+src/spa_: src/KOKKOS/libpkg_kokkos.a
 src/spa_: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
 src/spa_: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+src/spa_: src/KOKKOS/lib/kokkos/containers/src/libkokkoscontainers.a
+src/spa_: src/KOKKOS/lib/kokkos/core/src/libkokkoscore.a
+src/spa_: /usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs/libcuda.so
+src/spa_: /usr/local/cuda-12.6/targets/x86_64-linux/lib/libcudart.so
+src/spa_: src/KOKKOS/lib/kokkos/simd/src/libkokkossimd.a
 src/spa_: src/CMakeFiles/spa_.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable spa_"
 	cd /common/home/rvk22/opt/sparta/build-gpu/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spa_.dir/link.txt --verbose=$(VERBOSE)

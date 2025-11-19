@@ -1,3 +1,5 @@
 #include "surf_react_adsorb.h"
 #include "surf_react_global.h"
+#include "surf_react_global_kokkos.h"
 #include "surf_react_prob.h"
+#include "surf_react_prob_kokkos.h"

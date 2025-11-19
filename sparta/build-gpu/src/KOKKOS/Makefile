@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Kokkos\" \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -162,6 +162,1484 @@ depend:
 	cd /common/home/rvk22/opt/sparta/build-gpu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule
+.PHONY : src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule
+
+# Convenience name for target.
+pkg_kokkos: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule
+.PHONY : pkg_kokkos
+
+# fast build rule for target.
+pkg_kokkos/fast:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build
+.PHONY : pkg_kokkos/fast
+
+collide_vss_kokkos.o: collide_vss_kokkos.cpp.o
+.PHONY : collide_vss_kokkos.o
+
+# target to build an object file
+collide_vss_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/collide_vss_kokkos.cpp.o
+.PHONY : collide_vss_kokkos.cpp.o
+
+collide_vss_kokkos.i: collide_vss_kokkos.cpp.i
+.PHONY : collide_vss_kokkos.i
+
+# target to preprocess a source file
+collide_vss_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/collide_vss_kokkos.cpp.i
+.PHONY : collide_vss_kokkos.cpp.i
+
+collide_vss_kokkos.s: collide_vss_kokkos.cpp.s
+.PHONY : collide_vss_kokkos.s
+
+# target to generate assembly for a file
+collide_vss_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/collide_vss_kokkos.cpp.s
+.PHONY : collide_vss_kokkos.cpp.s
+
+comm_kokkos.o: comm_kokkos.cpp.o
+.PHONY : comm_kokkos.o
+
+# target to build an object file
+comm_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/comm_kokkos.cpp.o
+.PHONY : comm_kokkos.cpp.o
+
+comm_kokkos.i: comm_kokkos.cpp.i
+.PHONY : comm_kokkos.i
+
+# target to preprocess a source file
+comm_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/comm_kokkos.cpp.i
+.PHONY : comm_kokkos.cpp.i
+
+comm_kokkos.s: comm_kokkos.cpp.s
+.PHONY : comm_kokkos.s
+
+# target to generate assembly for a file
+comm_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/comm_kokkos.cpp.s
+.PHONY : comm_kokkos.cpp.s
+
+compute_boundary_kokkos.o: compute_boundary_kokkos.cpp.o
+.PHONY : compute_boundary_kokkos.o
+
+# target to build an object file
+compute_boundary_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_boundary_kokkos.cpp.o
+.PHONY : compute_boundary_kokkos.cpp.o
+
+compute_boundary_kokkos.i: compute_boundary_kokkos.cpp.i
+.PHONY : compute_boundary_kokkos.i
+
+# target to preprocess a source file
+compute_boundary_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_boundary_kokkos.cpp.i
+.PHONY : compute_boundary_kokkos.cpp.i
+
+compute_boundary_kokkos.s: compute_boundary_kokkos.cpp.s
+.PHONY : compute_boundary_kokkos.s
+
+# target to generate assembly for a file
+compute_boundary_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_boundary_kokkos.cpp.s
+.PHONY : compute_boundary_kokkos.cpp.s
+
+compute_count_kokkos.o: compute_count_kokkos.cpp.o
+.PHONY : compute_count_kokkos.o
+
+# target to build an object file
+compute_count_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_count_kokkos.cpp.o
+.PHONY : compute_count_kokkos.cpp.o
+
+compute_count_kokkos.i: compute_count_kokkos.cpp.i
+.PHONY : compute_count_kokkos.i
+
+# target to preprocess a source file
+compute_count_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_count_kokkos.cpp.i
+.PHONY : compute_count_kokkos.cpp.i
+
+compute_count_kokkos.s: compute_count_kokkos.cpp.s
+.PHONY : compute_count_kokkos.s
+
+# target to generate assembly for a file
+compute_count_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_count_kokkos.cpp.s
+.PHONY : compute_count_kokkos.cpp.s
+
+compute_distsurf_grid_kokkos.o: compute_distsurf_grid_kokkos.cpp.o
+.PHONY : compute_distsurf_grid_kokkos.o
+
+# target to build an object file
+compute_distsurf_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_distsurf_grid_kokkos.cpp.o
+.PHONY : compute_distsurf_grid_kokkos.cpp.o
+
+compute_distsurf_grid_kokkos.i: compute_distsurf_grid_kokkos.cpp.i
+.PHONY : compute_distsurf_grid_kokkos.i
+
+# target to preprocess a source file
+compute_distsurf_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_distsurf_grid_kokkos.cpp.i
+.PHONY : compute_distsurf_grid_kokkos.cpp.i
+
+compute_distsurf_grid_kokkos.s: compute_distsurf_grid_kokkos.cpp.s
+.PHONY : compute_distsurf_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_distsurf_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_distsurf_grid_kokkos.cpp.s
+.PHONY : compute_distsurf_grid_kokkos.cpp.s
+
+compute_dt_grid_kokkos.o: compute_dt_grid_kokkos.cpp.o
+.PHONY : compute_dt_grid_kokkos.o
+
+# target to build an object file
+compute_dt_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_dt_grid_kokkos.cpp.o
+.PHONY : compute_dt_grid_kokkos.cpp.o
+
+compute_dt_grid_kokkos.i: compute_dt_grid_kokkos.cpp.i
+.PHONY : compute_dt_grid_kokkos.i
+
+# target to preprocess a source file
+compute_dt_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_dt_grid_kokkos.cpp.i
+.PHONY : compute_dt_grid_kokkos.cpp.i
+
+compute_dt_grid_kokkos.s: compute_dt_grid_kokkos.cpp.s
+.PHONY : compute_dt_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_dt_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_dt_grid_kokkos.cpp.s
+.PHONY : compute_dt_grid_kokkos.cpp.s
+
+compute_eflux_grid_kokkos.o: compute_eflux_grid_kokkos.cpp.o
+.PHONY : compute_eflux_grid_kokkos.o
+
+# target to build an object file
+compute_eflux_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_eflux_grid_kokkos.cpp.o
+.PHONY : compute_eflux_grid_kokkos.cpp.o
+
+compute_eflux_grid_kokkos.i: compute_eflux_grid_kokkos.cpp.i
+.PHONY : compute_eflux_grid_kokkos.i
+
+# target to preprocess a source file
+compute_eflux_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_eflux_grid_kokkos.cpp.i
+.PHONY : compute_eflux_grid_kokkos.cpp.i
+
+compute_eflux_grid_kokkos.s: compute_eflux_grid_kokkos.cpp.s
+.PHONY : compute_eflux_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_eflux_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_eflux_grid_kokkos.cpp.s
+.PHONY : compute_eflux_grid_kokkos.cpp.s
+
+compute_fft_grid_kokkos.o: compute_fft_grid_kokkos.cpp.o
+.PHONY : compute_fft_grid_kokkos.o
+
+# target to build an object file
+compute_fft_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_fft_grid_kokkos.cpp.o
+.PHONY : compute_fft_grid_kokkos.cpp.o
+
+compute_fft_grid_kokkos.i: compute_fft_grid_kokkos.cpp.i
+.PHONY : compute_fft_grid_kokkos.i
+
+# target to preprocess a source file
+compute_fft_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_fft_grid_kokkos.cpp.i
+.PHONY : compute_fft_grid_kokkos.cpp.i
+
+compute_fft_grid_kokkos.s: compute_fft_grid_kokkos.cpp.s
+.PHONY : compute_fft_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_fft_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_fft_grid_kokkos.cpp.s
+.PHONY : compute_fft_grid_kokkos.cpp.s
+
+compute_grid_kokkos.o: compute_grid_kokkos.cpp.o
+.PHONY : compute_grid_kokkos.o
+
+# target to build an object file
+compute_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_grid_kokkos.cpp.o
+.PHONY : compute_grid_kokkos.cpp.o
+
+compute_grid_kokkos.i: compute_grid_kokkos.cpp.i
+.PHONY : compute_grid_kokkos.i
+
+# target to preprocess a source file
+compute_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_grid_kokkos.cpp.i
+.PHONY : compute_grid_kokkos.cpp.i
+
+compute_grid_kokkos.s: compute_grid_kokkos.cpp.s
+.PHONY : compute_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_grid_kokkos.cpp.s
+.PHONY : compute_grid_kokkos.cpp.s
+
+compute_ke_particle_kokkos.o: compute_ke_particle_kokkos.cpp.o
+.PHONY : compute_ke_particle_kokkos.o
+
+# target to build an object file
+compute_ke_particle_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_ke_particle_kokkos.cpp.o
+.PHONY : compute_ke_particle_kokkos.cpp.o
+
+compute_ke_particle_kokkos.i: compute_ke_particle_kokkos.cpp.i
+.PHONY : compute_ke_particle_kokkos.i
+
+# target to preprocess a source file
+compute_ke_particle_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_ke_particle_kokkos.cpp.i
+.PHONY : compute_ke_particle_kokkos.cpp.i
+
+compute_ke_particle_kokkos.s: compute_ke_particle_kokkos.cpp.s
+.PHONY : compute_ke_particle_kokkos.s
+
+# target to generate assembly for a file
+compute_ke_particle_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_ke_particle_kokkos.cpp.s
+.PHONY : compute_ke_particle_kokkos.cpp.s
+
+compute_lambda_grid_kokkos.o: compute_lambda_grid_kokkos.cpp.o
+.PHONY : compute_lambda_grid_kokkos.o
+
+# target to build an object file
+compute_lambda_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_lambda_grid_kokkos.cpp.o
+.PHONY : compute_lambda_grid_kokkos.cpp.o
+
+compute_lambda_grid_kokkos.i: compute_lambda_grid_kokkos.cpp.i
+.PHONY : compute_lambda_grid_kokkos.i
+
+# target to preprocess a source file
+compute_lambda_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_lambda_grid_kokkos.cpp.i
+.PHONY : compute_lambda_grid_kokkos.cpp.i
+
+compute_lambda_grid_kokkos.s: compute_lambda_grid_kokkos.cpp.s
+.PHONY : compute_lambda_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_lambda_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_lambda_grid_kokkos.cpp.s
+.PHONY : compute_lambda_grid_kokkos.cpp.s
+
+compute_pflux_grid_kokkos.o: compute_pflux_grid_kokkos.cpp.o
+.PHONY : compute_pflux_grid_kokkos.o
+
+# target to build an object file
+compute_pflux_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_pflux_grid_kokkos.cpp.o
+.PHONY : compute_pflux_grid_kokkos.cpp.o
+
+compute_pflux_grid_kokkos.i: compute_pflux_grid_kokkos.cpp.i
+.PHONY : compute_pflux_grid_kokkos.i
+
+# target to preprocess a source file
+compute_pflux_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_pflux_grid_kokkos.cpp.i
+.PHONY : compute_pflux_grid_kokkos.cpp.i
+
+compute_pflux_grid_kokkos.s: compute_pflux_grid_kokkos.cpp.s
+.PHONY : compute_pflux_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_pflux_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_pflux_grid_kokkos.cpp.s
+.PHONY : compute_pflux_grid_kokkos.cpp.s
+
+compute_property_grid_kokkos.o: compute_property_grid_kokkos.cpp.o
+.PHONY : compute_property_grid_kokkos.o
+
+# target to build an object file
+compute_property_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_property_grid_kokkos.cpp.o
+.PHONY : compute_property_grid_kokkos.cpp.o
+
+compute_property_grid_kokkos.i: compute_property_grid_kokkos.cpp.i
+.PHONY : compute_property_grid_kokkos.i
+
+# target to preprocess a source file
+compute_property_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_property_grid_kokkos.cpp.i
+.PHONY : compute_property_grid_kokkos.cpp.i
+
+compute_property_grid_kokkos.s: compute_property_grid_kokkos.cpp.s
+.PHONY : compute_property_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_property_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_property_grid_kokkos.cpp.s
+.PHONY : compute_property_grid_kokkos.cpp.s
+
+compute_sonine_grid_kokkos.o: compute_sonine_grid_kokkos.cpp.o
+.PHONY : compute_sonine_grid_kokkos.o
+
+# target to build an object file
+compute_sonine_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_sonine_grid_kokkos.cpp.o
+.PHONY : compute_sonine_grid_kokkos.cpp.o
+
+compute_sonine_grid_kokkos.i: compute_sonine_grid_kokkos.cpp.i
+.PHONY : compute_sonine_grid_kokkos.i
+
+# target to preprocess a source file
+compute_sonine_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_sonine_grid_kokkos.cpp.i
+.PHONY : compute_sonine_grid_kokkos.cpp.i
+
+compute_sonine_grid_kokkos.s: compute_sonine_grid_kokkos.cpp.s
+.PHONY : compute_sonine_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_sonine_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_sonine_grid_kokkos.cpp.s
+.PHONY : compute_sonine_grid_kokkos.cpp.s
+
+compute_surf_kokkos.o: compute_surf_kokkos.cpp.o
+.PHONY : compute_surf_kokkos.o
+
+# target to build an object file
+compute_surf_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_surf_kokkos.cpp.o
+.PHONY : compute_surf_kokkos.cpp.o
+
+compute_surf_kokkos.i: compute_surf_kokkos.cpp.i
+.PHONY : compute_surf_kokkos.i
+
+# target to preprocess a source file
+compute_surf_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_surf_kokkos.cpp.i
+.PHONY : compute_surf_kokkos.cpp.i
+
+compute_surf_kokkos.s: compute_surf_kokkos.cpp.s
+.PHONY : compute_surf_kokkos.s
+
+# target to generate assembly for a file
+compute_surf_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_surf_kokkos.cpp.s
+.PHONY : compute_surf_kokkos.cpp.s
+
+compute_temp_kokkos.o: compute_temp_kokkos.cpp.o
+.PHONY : compute_temp_kokkos.o
+
+# target to build an object file
+compute_temp_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_temp_kokkos.cpp.o
+.PHONY : compute_temp_kokkos.cpp.o
+
+compute_temp_kokkos.i: compute_temp_kokkos.cpp.i
+.PHONY : compute_temp_kokkos.i
+
+# target to preprocess a source file
+compute_temp_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_temp_kokkos.cpp.i
+.PHONY : compute_temp_kokkos.cpp.i
+
+compute_temp_kokkos.s: compute_temp_kokkos.cpp.s
+.PHONY : compute_temp_kokkos.s
+
+# target to generate assembly for a file
+compute_temp_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_temp_kokkos.cpp.s
+.PHONY : compute_temp_kokkos.cpp.s
+
+compute_thermal_grid_kokkos.o: compute_thermal_grid_kokkos.cpp.o
+.PHONY : compute_thermal_grid_kokkos.o
+
+# target to build an object file
+compute_thermal_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_thermal_grid_kokkos.cpp.o
+.PHONY : compute_thermal_grid_kokkos.cpp.o
+
+compute_thermal_grid_kokkos.i: compute_thermal_grid_kokkos.cpp.i
+.PHONY : compute_thermal_grid_kokkos.i
+
+# target to preprocess a source file
+compute_thermal_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_thermal_grid_kokkos.cpp.i
+.PHONY : compute_thermal_grid_kokkos.cpp.i
+
+compute_thermal_grid_kokkos.s: compute_thermal_grid_kokkos.cpp.s
+.PHONY : compute_thermal_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_thermal_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_thermal_grid_kokkos.cpp.s
+.PHONY : compute_thermal_grid_kokkos.cpp.s
+
+compute_tvib_grid_kokkos.o: compute_tvib_grid_kokkos.cpp.o
+.PHONY : compute_tvib_grid_kokkos.o
+
+# target to build an object file
+compute_tvib_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_tvib_grid_kokkos.cpp.o
+.PHONY : compute_tvib_grid_kokkos.cpp.o
+
+compute_tvib_grid_kokkos.i: compute_tvib_grid_kokkos.cpp.i
+.PHONY : compute_tvib_grid_kokkos.i
+
+# target to preprocess a source file
+compute_tvib_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_tvib_grid_kokkos.cpp.i
+.PHONY : compute_tvib_grid_kokkos.cpp.i
+
+compute_tvib_grid_kokkos.s: compute_tvib_grid_kokkos.cpp.s
+.PHONY : compute_tvib_grid_kokkos.s
+
+# target to generate assembly for a file
+compute_tvib_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/compute_tvib_grid_kokkos.cpp.s
+.PHONY : compute_tvib_grid_kokkos.cpp.s
+
+create_particles_kokkos.o: create_particles_kokkos.cpp.o
+.PHONY : create_particles_kokkos.o
+
+# target to build an object file
+create_particles_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/create_particles_kokkos.cpp.o
+.PHONY : create_particles_kokkos.cpp.o
+
+create_particles_kokkos.i: create_particles_kokkos.cpp.i
+.PHONY : create_particles_kokkos.i
+
+# target to preprocess a source file
+create_particles_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/create_particles_kokkos.cpp.i
+.PHONY : create_particles_kokkos.cpp.i
+
+create_particles_kokkos.s: create_particles_kokkos.cpp.s
+.PHONY : create_particles_kokkos.s
+
+# target to generate assembly for a file
+create_particles_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/create_particles_kokkos.cpp.s
+.PHONY : create_particles_kokkos.cpp.s
+
+domain_kokkos.o: domain_kokkos.cpp.o
+.PHONY : domain_kokkos.o
+
+# target to build an object file
+domain_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/domain_kokkos.cpp.o
+.PHONY : domain_kokkos.cpp.o
+
+domain_kokkos.i: domain_kokkos.cpp.i
+.PHONY : domain_kokkos.i
+
+# target to preprocess a source file
+domain_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/domain_kokkos.cpp.i
+.PHONY : domain_kokkos.cpp.i
+
+domain_kokkos.s: domain_kokkos.cpp.s
+.PHONY : domain_kokkos.s
+
+# target to generate assembly for a file
+domain_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/domain_kokkos.cpp.s
+.PHONY : domain_kokkos.cpp.s
+
+fft2d_kokkos.o: fft2d_kokkos.cpp.o
+.PHONY : fft2d_kokkos.o
+
+# target to build an object file
+fft2d_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft2d_kokkos.cpp.o
+.PHONY : fft2d_kokkos.cpp.o
+
+fft2d_kokkos.i: fft2d_kokkos.cpp.i
+.PHONY : fft2d_kokkos.i
+
+# target to preprocess a source file
+fft2d_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft2d_kokkos.cpp.i
+.PHONY : fft2d_kokkos.cpp.i
+
+fft2d_kokkos.s: fft2d_kokkos.cpp.s
+.PHONY : fft2d_kokkos.s
+
+# target to generate assembly for a file
+fft2d_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft2d_kokkos.cpp.s
+.PHONY : fft2d_kokkos.cpp.s
+
+fft3d_kokkos.o: fft3d_kokkos.cpp.o
+.PHONY : fft3d_kokkos.o
+
+# target to build an object file
+fft3d_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft3d_kokkos.cpp.o
+.PHONY : fft3d_kokkos.cpp.o
+
+fft3d_kokkos.i: fft3d_kokkos.cpp.i
+.PHONY : fft3d_kokkos.i
+
+# target to preprocess a source file
+fft3d_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft3d_kokkos.cpp.i
+.PHONY : fft3d_kokkos.cpp.i
+
+fft3d_kokkos.s: fft3d_kokkos.cpp.s
+.PHONY : fft3d_kokkos.s
+
+# target to generate assembly for a file
+fft3d_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fft3d_kokkos.cpp.s
+.PHONY : fft3d_kokkos.cpp.s
+
+fix_adapt_kokkos.o: fix_adapt_kokkos.cpp.o
+.PHONY : fix_adapt_kokkos.o
+
+# target to build an object file
+fix_adapt_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_adapt_kokkos.cpp.o
+.PHONY : fix_adapt_kokkos.cpp.o
+
+fix_adapt_kokkos.i: fix_adapt_kokkos.cpp.i
+.PHONY : fix_adapt_kokkos.i
+
+# target to preprocess a source file
+fix_adapt_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_adapt_kokkos.cpp.i
+.PHONY : fix_adapt_kokkos.cpp.i
+
+fix_adapt_kokkos.s: fix_adapt_kokkos.cpp.s
+.PHONY : fix_adapt_kokkos.s
+
+# target to generate assembly for a file
+fix_adapt_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_adapt_kokkos.cpp.s
+.PHONY : fix_adapt_kokkos.cpp.s
+
+fix_ambipolar_kokkos.o: fix_ambipolar_kokkos.cpp.o
+.PHONY : fix_ambipolar_kokkos.o
+
+# target to build an object file
+fix_ambipolar_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ambipolar_kokkos.cpp.o
+.PHONY : fix_ambipolar_kokkos.cpp.o
+
+fix_ambipolar_kokkos.i: fix_ambipolar_kokkos.cpp.i
+.PHONY : fix_ambipolar_kokkos.i
+
+# target to preprocess a source file
+fix_ambipolar_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ambipolar_kokkos.cpp.i
+.PHONY : fix_ambipolar_kokkos.cpp.i
+
+fix_ambipolar_kokkos.s: fix_ambipolar_kokkos.cpp.s
+.PHONY : fix_ambipolar_kokkos.s
+
+# target to generate assembly for a file
+fix_ambipolar_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ambipolar_kokkos.cpp.s
+.PHONY : fix_ambipolar_kokkos.cpp.s
+
+fix_ave_grid_kokkos.o: fix_ave_grid_kokkos.cpp.o
+.PHONY : fix_ave_grid_kokkos.o
+
+# target to build an object file
+fix_ave_grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_grid_kokkos.cpp.o
+.PHONY : fix_ave_grid_kokkos.cpp.o
+
+fix_ave_grid_kokkos.i: fix_ave_grid_kokkos.cpp.i
+.PHONY : fix_ave_grid_kokkos.i
+
+# target to preprocess a source file
+fix_ave_grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_grid_kokkos.cpp.i
+.PHONY : fix_ave_grid_kokkos.cpp.i
+
+fix_ave_grid_kokkos.s: fix_ave_grid_kokkos.cpp.s
+.PHONY : fix_ave_grid_kokkos.s
+
+# target to generate assembly for a file
+fix_ave_grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_grid_kokkos.cpp.s
+.PHONY : fix_ave_grid_kokkos.cpp.s
+
+fix_ave_histo_kokkos.o: fix_ave_histo_kokkos.cpp.o
+.PHONY : fix_ave_histo_kokkos.o
+
+# target to build an object file
+fix_ave_histo_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_kokkos.cpp.o
+.PHONY : fix_ave_histo_kokkos.cpp.o
+
+fix_ave_histo_kokkos.i: fix_ave_histo_kokkos.cpp.i
+.PHONY : fix_ave_histo_kokkos.i
+
+# target to preprocess a source file
+fix_ave_histo_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_kokkos.cpp.i
+.PHONY : fix_ave_histo_kokkos.cpp.i
+
+fix_ave_histo_kokkos.s: fix_ave_histo_kokkos.cpp.s
+.PHONY : fix_ave_histo_kokkos.s
+
+# target to generate assembly for a file
+fix_ave_histo_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_kokkos.cpp.s
+.PHONY : fix_ave_histo_kokkos.cpp.s
+
+fix_ave_histo_weight_kokkos.o: fix_ave_histo_weight_kokkos.cpp.o
+.PHONY : fix_ave_histo_weight_kokkos.o
+
+# target to build an object file
+fix_ave_histo_weight_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_weight_kokkos.cpp.o
+.PHONY : fix_ave_histo_weight_kokkos.cpp.o
+
+fix_ave_histo_weight_kokkos.i: fix_ave_histo_weight_kokkos.cpp.i
+.PHONY : fix_ave_histo_weight_kokkos.i
+
+# target to preprocess a source file
+fix_ave_histo_weight_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_weight_kokkos.cpp.i
+.PHONY : fix_ave_histo_weight_kokkos.cpp.i
+
+fix_ave_histo_weight_kokkos.s: fix_ave_histo_weight_kokkos.cpp.s
+.PHONY : fix_ave_histo_weight_kokkos.s
+
+# target to generate assembly for a file
+fix_ave_histo_weight_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_ave_histo_weight_kokkos.cpp.s
+.PHONY : fix_ave_histo_weight_kokkos.cpp.s
+
+fix_balance_kokkos.o: fix_balance_kokkos.cpp.o
+.PHONY : fix_balance_kokkos.o
+
+# target to build an object file
+fix_balance_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_balance_kokkos.cpp.o
+.PHONY : fix_balance_kokkos.cpp.o
+
+fix_balance_kokkos.i: fix_balance_kokkos.cpp.i
+.PHONY : fix_balance_kokkos.i
+
+# target to preprocess a source file
+fix_balance_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_balance_kokkos.cpp.i
+.PHONY : fix_balance_kokkos.cpp.i
+
+fix_balance_kokkos.s: fix_balance_kokkos.cpp.s
+.PHONY : fix_balance_kokkos.s
+
+# target to generate assembly for a file
+fix_balance_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_balance_kokkos.cpp.s
+.PHONY : fix_balance_kokkos.cpp.s
+
+fix_dt_reset_kokkos.o: fix_dt_reset_kokkos.cpp.o
+.PHONY : fix_dt_reset_kokkos.o
+
+# target to build an object file
+fix_dt_reset_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_dt_reset_kokkos.cpp.o
+.PHONY : fix_dt_reset_kokkos.cpp.o
+
+fix_dt_reset_kokkos.i: fix_dt_reset_kokkos.cpp.i
+.PHONY : fix_dt_reset_kokkos.i
+
+# target to preprocess a source file
+fix_dt_reset_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_dt_reset_kokkos.cpp.i
+.PHONY : fix_dt_reset_kokkos.cpp.i
+
+fix_dt_reset_kokkos.s: fix_dt_reset_kokkos.cpp.s
+.PHONY : fix_dt_reset_kokkos.s
+
+# target to generate assembly for a file
+fix_dt_reset_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_dt_reset_kokkos.cpp.s
+.PHONY : fix_dt_reset_kokkos.cpp.s
+
+fix_emit_face_kokkos.o: fix_emit_face_kokkos.cpp.o
+.PHONY : fix_emit_face_kokkos.o
+
+# target to build an object file
+fix_emit_face_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_emit_face_kokkos.cpp.o
+.PHONY : fix_emit_face_kokkos.cpp.o
+
+fix_emit_face_kokkos.i: fix_emit_face_kokkos.cpp.i
+.PHONY : fix_emit_face_kokkos.i
+
+# target to preprocess a source file
+fix_emit_face_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_emit_face_kokkos.cpp.i
+.PHONY : fix_emit_face_kokkos.cpp.i
+
+fix_emit_face_kokkos.s: fix_emit_face_kokkos.cpp.s
+.PHONY : fix_emit_face_kokkos.s
+
+# target to generate assembly for a file
+fix_emit_face_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_emit_face_kokkos.cpp.s
+.PHONY : fix_emit_face_kokkos.cpp.s
+
+fix_grid_check_kokkos.o: fix_grid_check_kokkos.cpp.o
+.PHONY : fix_grid_check_kokkos.o
+
+# target to build an object file
+fix_grid_check_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_grid_check_kokkos.cpp.o
+.PHONY : fix_grid_check_kokkos.cpp.o
+
+fix_grid_check_kokkos.i: fix_grid_check_kokkos.cpp.i
+.PHONY : fix_grid_check_kokkos.i
+
+# target to preprocess a source file
+fix_grid_check_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_grid_check_kokkos.cpp.i
+.PHONY : fix_grid_check_kokkos.cpp.i
+
+fix_grid_check_kokkos.s: fix_grid_check_kokkos.cpp.s
+.PHONY : fix_grid_check_kokkos.s
+
+# target to generate assembly for a file
+fix_grid_check_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_grid_check_kokkos.cpp.s
+.PHONY : fix_grid_check_kokkos.cpp.s
+
+fix_move_surf_kokkos.o: fix_move_surf_kokkos.cpp.o
+.PHONY : fix_move_surf_kokkos.o
+
+# target to build an object file
+fix_move_surf_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_move_surf_kokkos.cpp.o
+.PHONY : fix_move_surf_kokkos.cpp.o
+
+fix_move_surf_kokkos.i: fix_move_surf_kokkos.cpp.i
+.PHONY : fix_move_surf_kokkos.i
+
+# target to preprocess a source file
+fix_move_surf_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_move_surf_kokkos.cpp.i
+.PHONY : fix_move_surf_kokkos.cpp.i
+
+fix_move_surf_kokkos.s: fix_move_surf_kokkos.cpp.s
+.PHONY : fix_move_surf_kokkos.s
+
+# target to generate assembly for a file
+fix_move_surf_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_move_surf_kokkos.cpp.s
+.PHONY : fix_move_surf_kokkos.cpp.s
+
+fix_surf_temp_kokkos.o: fix_surf_temp_kokkos.cpp.o
+.PHONY : fix_surf_temp_kokkos.o
+
+# target to build an object file
+fix_surf_temp_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_surf_temp_kokkos.cpp.o
+.PHONY : fix_surf_temp_kokkos.cpp.o
+
+fix_surf_temp_kokkos.i: fix_surf_temp_kokkos.cpp.i
+.PHONY : fix_surf_temp_kokkos.i
+
+# target to preprocess a source file
+fix_surf_temp_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_surf_temp_kokkos.cpp.i
+.PHONY : fix_surf_temp_kokkos.cpp.i
+
+fix_surf_temp_kokkos.s: fix_surf_temp_kokkos.cpp.s
+.PHONY : fix_surf_temp_kokkos.s
+
+# target to generate assembly for a file
+fix_surf_temp_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_surf_temp_kokkos.cpp.s
+.PHONY : fix_surf_temp_kokkos.cpp.s
+
+fix_temp_rescale_kokkos.o: fix_temp_rescale_kokkos.cpp.o
+.PHONY : fix_temp_rescale_kokkos.o
+
+# target to build an object file
+fix_temp_rescale_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_temp_rescale_kokkos.cpp.o
+.PHONY : fix_temp_rescale_kokkos.cpp.o
+
+fix_temp_rescale_kokkos.i: fix_temp_rescale_kokkos.cpp.i
+.PHONY : fix_temp_rescale_kokkos.i
+
+# target to preprocess a source file
+fix_temp_rescale_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_temp_rescale_kokkos.cpp.i
+.PHONY : fix_temp_rescale_kokkos.cpp.i
+
+fix_temp_rescale_kokkos.s: fix_temp_rescale_kokkos.cpp.s
+.PHONY : fix_temp_rescale_kokkos.s
+
+# target to generate assembly for a file
+fix_temp_rescale_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_temp_rescale_kokkos.cpp.s
+.PHONY : fix_temp_rescale_kokkos.cpp.s
+
+fix_vibmode_kokkos.o: fix_vibmode_kokkos.cpp.o
+.PHONY : fix_vibmode_kokkos.o
+
+# target to build an object file
+fix_vibmode_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_vibmode_kokkos.cpp.o
+.PHONY : fix_vibmode_kokkos.cpp.o
+
+fix_vibmode_kokkos.i: fix_vibmode_kokkos.cpp.i
+.PHONY : fix_vibmode_kokkos.i
+
+# target to preprocess a source file
+fix_vibmode_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_vibmode_kokkos.cpp.i
+.PHONY : fix_vibmode_kokkos.cpp.i
+
+fix_vibmode_kokkos.s: fix_vibmode_kokkos.cpp.s
+.PHONY : fix_vibmode_kokkos.s
+
+# target to generate assembly for a file
+fix_vibmode_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/fix_vibmode_kokkos.cpp.s
+.PHONY : fix_vibmode_kokkos.cpp.s
+
+grid_custom_kokkos.o: grid_custom_kokkos.cpp.o
+.PHONY : grid_custom_kokkos.o
+
+# target to build an object file
+grid_custom_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_custom_kokkos.cpp.o
+.PHONY : grid_custom_kokkos.cpp.o
+
+grid_custom_kokkos.i: grid_custom_kokkos.cpp.i
+.PHONY : grid_custom_kokkos.i
+
+# target to preprocess a source file
+grid_custom_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_custom_kokkos.cpp.i
+.PHONY : grid_custom_kokkos.cpp.i
+
+grid_custom_kokkos.s: grid_custom_kokkos.cpp.s
+.PHONY : grid_custom_kokkos.s
+
+# target to generate assembly for a file
+grid_custom_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_custom_kokkos.cpp.s
+.PHONY : grid_custom_kokkos.cpp.s
+
+grid_id_kokkos.o: grid_id_kokkos.cpp.o
+.PHONY : grid_id_kokkos.o
+
+# target to build an object file
+grid_id_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_id_kokkos.cpp.o
+.PHONY : grid_id_kokkos.cpp.o
+
+grid_id_kokkos.i: grid_id_kokkos.cpp.i
+.PHONY : grid_id_kokkos.i
+
+# target to preprocess a source file
+grid_id_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_id_kokkos.cpp.i
+.PHONY : grid_id_kokkos.cpp.i
+
+grid_id_kokkos.s: grid_id_kokkos.cpp.s
+.PHONY : grid_id_kokkos.s
+
+# target to generate assembly for a file
+grid_id_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_id_kokkos.cpp.s
+.PHONY : grid_id_kokkos.cpp.s
+
+grid_kokkos.o: grid_kokkos.cpp.o
+.PHONY : grid_kokkos.o
+
+# target to build an object file
+grid_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_kokkos.cpp.o
+.PHONY : grid_kokkos.cpp.o
+
+grid_kokkos.i: grid_kokkos.cpp.i
+.PHONY : grid_kokkos.i
+
+# target to preprocess a source file
+grid_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_kokkos.cpp.i
+.PHONY : grid_kokkos.cpp.i
+
+grid_kokkos.s: grid_kokkos.cpp.s
+.PHONY : grid_kokkos.s
+
+# target to generate assembly for a file
+grid_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/grid_kokkos.cpp.s
+.PHONY : grid_kokkos.cpp.s
+
+irregular_kokkos.o: irregular_kokkos.cpp.o
+.PHONY : irregular_kokkos.o
+
+# target to build an object file
+irregular_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/irregular_kokkos.cpp.o
+.PHONY : irregular_kokkos.cpp.o
+
+irregular_kokkos.i: irregular_kokkos.cpp.i
+.PHONY : irregular_kokkos.i
+
+# target to preprocess a source file
+irregular_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/irregular_kokkos.cpp.i
+.PHONY : irregular_kokkos.cpp.i
+
+irregular_kokkos.s: irregular_kokkos.cpp.s
+.PHONY : irregular_kokkos.s
+
+# target to generate assembly for a file
+irregular_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/irregular_kokkos.cpp.s
+.PHONY : irregular_kokkos.cpp.s
+
+kokkos.o: kokkos.cpp.o
+.PHONY : kokkos.o
+
+# target to build an object file
+kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos.cpp.o
+.PHONY : kokkos.cpp.o
+
+kokkos.i: kokkos.cpp.i
+.PHONY : kokkos.i
+
+# target to preprocess a source file
+kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos.cpp.i
+.PHONY : kokkos.cpp.i
+
+kokkos.s: kokkos.cpp.s
+.PHONY : kokkos.s
+
+# target to generate assembly for a file
+kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos.cpp.s
+.PHONY : kokkos.cpp.s
+
+kokkos_scan.o: kokkos_scan.cpp.o
+.PHONY : kokkos_scan.o
+
+# target to build an object file
+kokkos_scan.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos_scan.cpp.o
+.PHONY : kokkos_scan.cpp.o
+
+kokkos_scan.i: kokkos_scan.cpp.i
+.PHONY : kokkos_scan.i
+
+# target to preprocess a source file
+kokkos_scan.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos_scan.cpp.i
+.PHONY : kokkos_scan.cpp.i
+
+kokkos_scan.s: kokkos_scan.cpp.s
+.PHONY : kokkos_scan.s
+
+# target to generate assembly for a file
+kokkos_scan.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/kokkos_scan.cpp.s
+.PHONY : kokkos_scan.cpp.s
+
+modify_kokkos.o: modify_kokkos.cpp.o
+.PHONY : modify_kokkos.o
+
+# target to build an object file
+modify_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/modify_kokkos.cpp.o
+.PHONY : modify_kokkos.cpp.o
+
+modify_kokkos.i: modify_kokkos.cpp.i
+.PHONY : modify_kokkos.i
+
+# target to preprocess a source file
+modify_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/modify_kokkos.cpp.i
+.PHONY : modify_kokkos.cpp.i
+
+modify_kokkos.s: modify_kokkos.cpp.s
+.PHONY : modify_kokkos.s
+
+# target to generate assembly for a file
+modify_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/modify_kokkos.cpp.s
+.PHONY : modify_kokkos.cpp.s
+
+particle_custom_kokkos.o: particle_custom_kokkos.cpp.o
+.PHONY : particle_custom_kokkos.o
+
+# target to build an object file
+particle_custom_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_custom_kokkos.cpp.o
+.PHONY : particle_custom_kokkos.cpp.o
+
+particle_custom_kokkos.i: particle_custom_kokkos.cpp.i
+.PHONY : particle_custom_kokkos.i
+
+# target to preprocess a source file
+particle_custom_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_custom_kokkos.cpp.i
+.PHONY : particle_custom_kokkos.cpp.i
+
+particle_custom_kokkos.s: particle_custom_kokkos.cpp.s
+.PHONY : particle_custom_kokkos.s
+
+# target to generate assembly for a file
+particle_custom_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_custom_kokkos.cpp.s
+.PHONY : particle_custom_kokkos.cpp.s
+
+particle_kokkos.o: particle_kokkos.cpp.o
+.PHONY : particle_kokkos.o
+
+# target to build an object file
+particle_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_kokkos.cpp.o
+.PHONY : particle_kokkos.cpp.o
+
+particle_kokkos.i: particle_kokkos.cpp.i
+.PHONY : particle_kokkos.i
+
+# target to preprocess a source file
+particle_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_kokkos.cpp.i
+.PHONY : particle_kokkos.cpp.i
+
+particle_kokkos.s: particle_kokkos.cpp.s
+.PHONY : particle_kokkos.s
+
+# target to generate assembly for a file
+particle_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/particle_kokkos.cpp.s
+.PHONY : particle_kokkos.cpp.s
+
+rand_pool_wrap.o: rand_pool_wrap.cpp.o
+.PHONY : rand_pool_wrap.o
+
+# target to build an object file
+rand_pool_wrap.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rand_pool_wrap.cpp.o
+.PHONY : rand_pool_wrap.cpp.o
+
+rand_pool_wrap.i: rand_pool_wrap.cpp.i
+.PHONY : rand_pool_wrap.i
+
+# target to preprocess a source file
+rand_pool_wrap.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rand_pool_wrap.cpp.i
+.PHONY : rand_pool_wrap.cpp.i
+
+rand_pool_wrap.s: rand_pool_wrap.cpp.s
+.PHONY : rand_pool_wrap.s
+
+# target to generate assembly for a file
+rand_pool_wrap.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rand_pool_wrap.cpp.s
+.PHONY : rand_pool_wrap.cpp.s
+
+react_bird_kokkos.o: react_bird_kokkos.cpp.o
+.PHONY : react_bird_kokkos.o
+
+# target to build an object file
+react_bird_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_bird_kokkos.cpp.o
+.PHONY : react_bird_kokkos.cpp.o
+
+react_bird_kokkos.i: react_bird_kokkos.cpp.i
+.PHONY : react_bird_kokkos.i
+
+# target to preprocess a source file
+react_bird_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_bird_kokkos.cpp.i
+.PHONY : react_bird_kokkos.cpp.i
+
+react_bird_kokkos.s: react_bird_kokkos.cpp.s
+.PHONY : react_bird_kokkos.s
+
+# target to generate assembly for a file
+react_bird_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_bird_kokkos.cpp.s
+.PHONY : react_bird_kokkos.cpp.s
+
+react_tce_kokkos.o: react_tce_kokkos.cpp.o
+.PHONY : react_tce_kokkos.o
+
+# target to build an object file
+react_tce_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_tce_kokkos.cpp.o
+.PHONY : react_tce_kokkos.cpp.o
+
+react_tce_kokkos.i: react_tce_kokkos.cpp.i
+.PHONY : react_tce_kokkos.i
+
+# target to preprocess a source file
+react_tce_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_tce_kokkos.cpp.i
+.PHONY : react_tce_kokkos.cpp.i
+
+react_tce_kokkos.s: react_tce_kokkos.cpp.s
+.PHONY : react_tce_kokkos.s
+
+# target to generate assembly for a file
+react_tce_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/react_tce_kokkos.cpp.s
+.PHONY : react_tce_kokkos.cpp.s
+
+read_surf_kokkos.o: read_surf_kokkos.cpp.o
+.PHONY : read_surf_kokkos.o
+
+# target to build an object file
+read_surf_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/read_surf_kokkos.cpp.o
+.PHONY : read_surf_kokkos.cpp.o
+
+read_surf_kokkos.i: read_surf_kokkos.cpp.i
+.PHONY : read_surf_kokkos.i
+
+# target to preprocess a source file
+read_surf_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/read_surf_kokkos.cpp.i
+.PHONY : read_surf_kokkos.cpp.i
+
+read_surf_kokkos.s: read_surf_kokkos.cpp.s
+.PHONY : read_surf_kokkos.s
+
+# target to generate assembly for a file
+read_surf_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/read_surf_kokkos.cpp.s
+.PHONY : read_surf_kokkos.cpp.s
+
+remap2d_kokkos.o: remap2d_kokkos.cpp.o
+.PHONY : remap2d_kokkos.o
+
+# target to build an object file
+remap2d_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap2d_kokkos.cpp.o
+.PHONY : remap2d_kokkos.cpp.o
+
+remap2d_kokkos.i: remap2d_kokkos.cpp.i
+.PHONY : remap2d_kokkos.i
+
+# target to preprocess a source file
+remap2d_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap2d_kokkos.cpp.i
+.PHONY : remap2d_kokkos.cpp.i
+
+remap2d_kokkos.s: remap2d_kokkos.cpp.s
+.PHONY : remap2d_kokkos.s
+
+# target to generate assembly for a file
+remap2d_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap2d_kokkos.cpp.s
+.PHONY : remap2d_kokkos.cpp.s
+
+remap3d_kokkos.o: remap3d_kokkos.cpp.o
+.PHONY : remap3d_kokkos.o
+
+# target to build an object file
+remap3d_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap3d_kokkos.cpp.o
+.PHONY : remap3d_kokkos.cpp.o
+
+remap3d_kokkos.i: remap3d_kokkos.cpp.i
+.PHONY : remap3d_kokkos.i
+
+# target to preprocess a source file
+remap3d_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap3d_kokkos.cpp.i
+.PHONY : remap3d_kokkos.cpp.i
+
+remap3d_kokkos.s: remap3d_kokkos.cpp.s
+.PHONY : remap3d_kokkos.s
+
+# target to generate assembly for a file
+remap3d_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/remap3d_kokkos.cpp.s
+.PHONY : remap3d_kokkos.cpp.s
+
+surf_collide_diffuse_kokkos.o: surf_collide_diffuse_kokkos.cpp.o
+.PHONY : surf_collide_diffuse_kokkos.o
+
+# target to build an object file
+surf_collide_diffuse_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_diffuse_kokkos.cpp.o
+.PHONY : surf_collide_diffuse_kokkos.cpp.o
+
+surf_collide_diffuse_kokkos.i: surf_collide_diffuse_kokkos.cpp.i
+.PHONY : surf_collide_diffuse_kokkos.i
+
+# target to preprocess a source file
+surf_collide_diffuse_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_diffuse_kokkos.cpp.i
+.PHONY : surf_collide_diffuse_kokkos.cpp.i
+
+surf_collide_diffuse_kokkos.s: surf_collide_diffuse_kokkos.cpp.s
+.PHONY : surf_collide_diffuse_kokkos.s
+
+# target to generate assembly for a file
+surf_collide_diffuse_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_diffuse_kokkos.cpp.s
+.PHONY : surf_collide_diffuse_kokkos.cpp.s
+
+surf_collide_piston_kokkos.o: surf_collide_piston_kokkos.cpp.o
+.PHONY : surf_collide_piston_kokkos.o
+
+# target to build an object file
+surf_collide_piston_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_piston_kokkos.cpp.o
+.PHONY : surf_collide_piston_kokkos.cpp.o
+
+surf_collide_piston_kokkos.i: surf_collide_piston_kokkos.cpp.i
+.PHONY : surf_collide_piston_kokkos.i
+
+# target to preprocess a source file
+surf_collide_piston_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_piston_kokkos.cpp.i
+.PHONY : surf_collide_piston_kokkos.cpp.i
+
+surf_collide_piston_kokkos.s: surf_collide_piston_kokkos.cpp.s
+.PHONY : surf_collide_piston_kokkos.s
+
+# target to generate assembly for a file
+surf_collide_piston_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_piston_kokkos.cpp.s
+.PHONY : surf_collide_piston_kokkos.cpp.s
+
+surf_collide_specular_kokkos.o: surf_collide_specular_kokkos.cpp.o
+.PHONY : surf_collide_specular_kokkos.o
+
+# target to build an object file
+surf_collide_specular_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_specular_kokkos.cpp.o
+.PHONY : surf_collide_specular_kokkos.cpp.o
+
+surf_collide_specular_kokkos.i: surf_collide_specular_kokkos.cpp.i
+.PHONY : surf_collide_specular_kokkos.i
+
+# target to preprocess a source file
+surf_collide_specular_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_specular_kokkos.cpp.i
+.PHONY : surf_collide_specular_kokkos.cpp.i
+
+surf_collide_specular_kokkos.s: surf_collide_specular_kokkos.cpp.s
+.PHONY : surf_collide_specular_kokkos.s
+
+# target to generate assembly for a file
+surf_collide_specular_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_specular_kokkos.cpp.s
+.PHONY : surf_collide_specular_kokkos.cpp.s
+
+surf_collide_transparent_kokkos.o: surf_collide_transparent_kokkos.cpp.o
+.PHONY : surf_collide_transparent_kokkos.o
+
+# target to build an object file
+surf_collide_transparent_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_transparent_kokkos.cpp.o
+.PHONY : surf_collide_transparent_kokkos.cpp.o
+
+surf_collide_transparent_kokkos.i: surf_collide_transparent_kokkos.cpp.i
+.PHONY : surf_collide_transparent_kokkos.i
+
+# target to preprocess a source file
+surf_collide_transparent_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_transparent_kokkos.cpp.i
+.PHONY : surf_collide_transparent_kokkos.cpp.i
+
+surf_collide_transparent_kokkos.s: surf_collide_transparent_kokkos.cpp.s
+.PHONY : surf_collide_transparent_kokkos.s
+
+# target to generate assembly for a file
+surf_collide_transparent_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_transparent_kokkos.cpp.s
+.PHONY : surf_collide_transparent_kokkos.cpp.s
+
+surf_collide_vanish_kokkos.o: surf_collide_vanish_kokkos.cpp.o
+.PHONY : surf_collide_vanish_kokkos.o
+
+# target to build an object file
+surf_collide_vanish_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_vanish_kokkos.cpp.o
+.PHONY : surf_collide_vanish_kokkos.cpp.o
+
+surf_collide_vanish_kokkos.i: surf_collide_vanish_kokkos.cpp.i
+.PHONY : surf_collide_vanish_kokkos.i
+
+# target to preprocess a source file
+surf_collide_vanish_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_vanish_kokkos.cpp.i
+.PHONY : surf_collide_vanish_kokkos.cpp.i
+
+surf_collide_vanish_kokkos.s: surf_collide_vanish_kokkos.cpp.s
+.PHONY : surf_collide_vanish_kokkos.s
+
+# target to generate assembly for a file
+surf_collide_vanish_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_collide_vanish_kokkos.cpp.s
+.PHONY : surf_collide_vanish_kokkos.cpp.s
+
+surf_custom_kokkos.o: surf_custom_kokkos.cpp.o
+.PHONY : surf_custom_kokkos.o
+
+# target to build an object file
+surf_custom_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_custom_kokkos.cpp.o
+.PHONY : surf_custom_kokkos.cpp.o
+
+surf_custom_kokkos.i: surf_custom_kokkos.cpp.i
+.PHONY : surf_custom_kokkos.i
+
+# target to preprocess a source file
+surf_custom_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_custom_kokkos.cpp.i
+.PHONY : surf_custom_kokkos.cpp.i
+
+surf_custom_kokkos.s: surf_custom_kokkos.cpp.s
+.PHONY : surf_custom_kokkos.s
+
+# target to generate assembly for a file
+surf_custom_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_custom_kokkos.cpp.s
+.PHONY : surf_custom_kokkos.cpp.s
+
+surf_kokkos.o: surf_kokkos.cpp.o
+.PHONY : surf_kokkos.o
+
+# target to build an object file
+surf_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_kokkos.cpp.o
+.PHONY : surf_kokkos.cpp.o
+
+surf_kokkos.i: surf_kokkos.cpp.i
+.PHONY : surf_kokkos.i
+
+# target to preprocess a source file
+surf_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_kokkos.cpp.i
+.PHONY : surf_kokkos.cpp.i
+
+surf_kokkos.s: surf_kokkos.cpp.s
+.PHONY : surf_kokkos.s
+
+# target to generate assembly for a file
+surf_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_kokkos.cpp.s
+.PHONY : surf_kokkos.cpp.s
+
+surf_react_global_kokkos.o: surf_react_global_kokkos.cpp.o
+.PHONY : surf_react_global_kokkos.o
+
+# target to build an object file
+surf_react_global_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_global_kokkos.cpp.o
+.PHONY : surf_react_global_kokkos.cpp.o
+
+surf_react_global_kokkos.i: surf_react_global_kokkos.cpp.i
+.PHONY : surf_react_global_kokkos.i
+
+# target to preprocess a source file
+surf_react_global_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_global_kokkos.cpp.i
+.PHONY : surf_react_global_kokkos.cpp.i
+
+surf_react_global_kokkos.s: surf_react_global_kokkos.cpp.s
+.PHONY : surf_react_global_kokkos.s
+
+# target to generate assembly for a file
+surf_react_global_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_global_kokkos.cpp.s
+.PHONY : surf_react_global_kokkos.cpp.s
+
+surf_react_prob_kokkos.o: surf_react_prob_kokkos.cpp.o
+.PHONY : surf_react_prob_kokkos.o
+
+# target to build an object file
+surf_react_prob_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_prob_kokkos.cpp.o
+.PHONY : surf_react_prob_kokkos.cpp.o
+
+surf_react_prob_kokkos.i: surf_react_prob_kokkos.cpp.i
+.PHONY : surf_react_prob_kokkos.i
+
+# target to preprocess a source file
+surf_react_prob_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_prob_kokkos.cpp.i
+.PHONY : surf_react_prob_kokkos.cpp.i
+
+surf_react_prob_kokkos.s: surf_react_prob_kokkos.cpp.s
+.PHONY : surf_react_prob_kokkos.s
+
+# target to generate assembly for a file
+surf_react_prob_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/surf_react_prob_kokkos.cpp.s
+.PHONY : surf_react_prob_kokkos.cpp.s
+
+update_kokkos.o: update_kokkos.cpp.o
+.PHONY : update_kokkos.o
+
+# target to build an object file
+update_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/update_kokkos.cpp.o
+.PHONY : update_kokkos.cpp.o
+
+update_kokkos.i: update_kokkos.cpp.i
+.PHONY : update_kokkos.i
+
+# target to preprocess a source file
+update_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/update_kokkos.cpp.i
+.PHONY : update_kokkos.cpp.i
+
+update_kokkos.s: update_kokkos.cpp.s
+.PHONY : update_kokkos.s
+
+# target to generate assembly for a file
+update_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/update_kokkos.cpp.s
+.PHONY : update_kokkos.cpp.s
+
+variable_kokkos.o: variable_kokkos.cpp.o
+.PHONY : variable_kokkos.o
+
+# target to build an object file
+variable_kokkos.cpp.o:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/variable_kokkos.cpp.o
+.PHONY : variable_kokkos.cpp.o
+
+variable_kokkos.i: variable_kokkos.cpp.i
+.PHONY : variable_kokkos.i
+
+# target to preprocess a source file
+variable_kokkos.cpp.i:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/variable_kokkos.cpp.i
+.PHONY : variable_kokkos.cpp.i
+
+variable_kokkos.s: variable_kokkos.cpp.s
+.PHONY : variable_kokkos.s
+
+# target to generate assembly for a file
+variable_kokkos.cpp.s:
+	cd /common/home/rvk22/opt/sparta/build-gpu && $(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/variable_kokkos.cpp.s
+.PHONY : variable_kokkos.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +1652,190 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... pkg_kokkos"
+	@echo "... collide_vss_kokkos.o"
+	@echo "... collide_vss_kokkos.i"
+	@echo "... collide_vss_kokkos.s"
+	@echo "... comm_kokkos.o"
+	@echo "... comm_kokkos.i"
+	@echo "... comm_kokkos.s"
+	@echo "... compute_boundary_kokkos.o"
+	@echo "... compute_boundary_kokkos.i"
+	@echo "... compute_boundary_kokkos.s"
+	@echo "... compute_count_kokkos.o"
+	@echo "... compute_count_kokkos.i"
+	@echo "... compute_count_kokkos.s"
+	@echo "... compute_distsurf_grid_kokkos.o"
+	@echo "... compute_distsurf_grid_kokkos.i"
+	@echo "... compute_distsurf_grid_kokkos.s"
+	@echo "... compute_dt_grid_kokkos.o"
+	@echo "... compute_dt_grid_kokkos.i"
+	@echo "... compute_dt_grid_kokkos.s"
+	@echo "... compute_eflux_grid_kokkos.o"
+	@echo "... compute_eflux_grid_kokkos.i"
+	@echo "... compute_eflux_grid_kokkos.s"
+	@echo "... compute_fft_grid_kokkos.o"
+	@echo "... compute_fft_grid_kokkos.i"
+	@echo "... compute_fft_grid_kokkos.s"
+	@echo "... compute_grid_kokkos.o"
+	@echo "... compute_grid_kokkos.i"
+	@echo "... compute_grid_kokkos.s"
+	@echo "... compute_ke_particle_kokkos.o"
+	@echo "... compute_ke_particle_kokkos.i"
+	@echo "... compute_ke_particle_kokkos.s"
+	@echo "... compute_lambda_grid_kokkos.o"
+	@echo "... compute_lambda_grid_kokkos.i"
+	@echo "... compute_lambda_grid_kokkos.s"
+	@echo "... compute_pflux_grid_kokkos.o"
+	@echo "... compute_pflux_grid_kokkos.i"
+	@echo "... compute_pflux_grid_kokkos.s"
+	@echo "... compute_property_grid_kokkos.o"
+	@echo "... compute_property_grid_kokkos.i"
+	@echo "... compute_property_grid_kokkos.s"
+	@echo "... compute_sonine_grid_kokkos.o"
+	@echo "... compute_sonine_grid_kokkos.i"
+	@echo "... compute_sonine_grid_kokkos.s"
+	@echo "... compute_surf_kokkos.o"
+	@echo "... compute_surf_kokkos.i"
+	@echo "... compute_surf_kokkos.s"
+	@echo "... compute_temp_kokkos.o"
+	@echo "... compute_temp_kokkos.i"
+	@echo "... compute_temp_kokkos.s"
+	@echo "... compute_thermal_grid_kokkos.o"
+	@echo "... compute_thermal_grid_kokkos.i"
+	@echo "... compute_thermal_grid_kokkos.s"
+	@echo "... compute_tvib_grid_kokkos.o"
+	@echo "... compute_tvib_grid_kokkos.i"
+	@echo "... compute_tvib_grid_kokkos.s"
+	@echo "... create_particles_kokkos.o"
+	@echo "... create_particles_kokkos.i"
+	@echo "... create_particles_kokkos.s"
+	@echo "... domain_kokkos.o"
+	@echo "... domain_kokkos.i"
+	@echo "... domain_kokkos.s"
+	@echo "... fft2d_kokkos.o"
+	@echo "... fft2d_kokkos.i"
+	@echo "... fft2d_kokkos.s"
+	@echo "... fft3d_kokkos.o"
+	@echo "... fft3d_kokkos.i"
+	@echo "... fft3d_kokkos.s"
+	@echo "... fix_adapt_kokkos.o"
+	@echo "... fix_adapt_kokkos.i"
+	@echo "... fix_adapt_kokkos.s"
+	@echo "... fix_ambipolar_kokkos.o"
+	@echo "... fix_ambipolar_kokkos.i"
+	@echo "... fix_ambipolar_kokkos.s"
+	@echo "... fix_ave_grid_kokkos.o"
+	@echo "... fix_ave_grid_kokkos.i"
+	@echo "... fix_ave_grid_kokkos.s"
+	@echo "... fix_ave_histo_kokkos.o"
+	@echo "... fix_ave_histo_kokkos.i"
+	@echo "... fix_ave_histo_kokkos.s"
+	@echo "... fix_ave_histo_weight_kokkos.o"
+	@echo "... fix_ave_histo_weight_kokkos.i"
+	@echo "... fix_ave_histo_weight_kokkos.s"
+	@echo "... fix_balance_kokkos.o"
+	@echo "... fix_balance_kokkos.i"
+	@echo "... fix_balance_kokkos.s"
+	@echo "... fix_dt_reset_kokkos.o"
+	@echo "... fix_dt_reset_kokkos.i"
+	@echo "... fix_dt_reset_kokkos.s"
+	@echo "... fix_emit_face_kokkos.o"
+	@echo "... fix_emit_face_kokkos.i"
+	@echo "... fix_emit_face_kokkos.s"
+	@echo "... fix_grid_check_kokkos.o"
+	@echo "... fix_grid_check_kokkos.i"
+	@echo "... fix_grid_check_kokkos.s"
+	@echo "... fix_move_surf_kokkos.o"
+	@echo "... fix_move_surf_kokkos.i"
+	@echo "... fix_move_surf_kokkos.s"
+	@echo "... fix_surf_temp_kokkos.o"
+	@echo "... fix_surf_temp_kokkos.i"
+	@echo "... fix_surf_temp_kokkos.s"
+	@echo "... fix_temp_rescale_kokkos.o"
+	@echo "... fix_temp_rescale_kokkos.i"
+	@echo "... fix_temp_rescale_kokkos.s"
+	@echo "... fix_vibmode_kokkos.o"
+	@echo "... fix_vibmode_kokkos.i"
+	@echo "... fix_vibmode_kokkos.s"
+	@echo "... grid_custom_kokkos.o"
+	@echo "... grid_custom_kokkos.i"
+	@echo "... grid_custom_kokkos.s"
+	@echo "... grid_id_kokkos.o"
+	@echo "... grid_id_kokkos.i"
+	@echo "... grid_id_kokkos.s"
+	@echo "... grid_kokkos.o"
+	@echo "... grid_kokkos.i"
+	@echo "... grid_kokkos.s"
+	@echo "... irregular_kokkos.o"
+	@echo "... irregular_kokkos.i"
+	@echo "... irregular_kokkos.s"
+	@echo "... kokkos.o"
+	@echo "... kokkos.i"
+	@echo "... kokkos.s"
+	@echo "... kokkos_scan.o"
+	@echo "... kokkos_scan.i"
+	@echo "... kokkos_scan.s"
+	@echo "... modify_kokkos.o"
+	@echo "... modify_kokkos.i"
+	@echo "... modify_kokkos.s"
+	@echo "... particle_custom_kokkos.o"
+	@echo "... particle_custom_kokkos.i"
+	@echo "... particle_custom_kokkos.s"
+	@echo "... particle_kokkos.o"
+	@echo "... particle_kokkos.i"
+	@echo "... particle_kokkos.s"
+	@echo "... rand_pool_wrap.o"
+	@echo "... rand_pool_wrap.i"
+	@echo "... rand_pool_wrap.s"
+	@echo "... react_bird_kokkos.o"
+	@echo "... react_bird_kokkos.i"
+	@echo "... react_bird_kokkos.s"
+	@echo "... react_tce_kokkos.o"
+	@echo "... react_tce_kokkos.i"
+	@echo "... react_tce_kokkos.s"
+	@echo "... read_surf_kokkos.o"
+	@echo "... read_surf_kokkos.i"
+	@echo "... read_surf_kokkos.s"
+	@echo "... remap2d_kokkos.o"
+	@echo "... remap2d_kokkos.i"
+	@echo "... remap2d_kokkos.s"
+	@echo "... remap3d_kokkos.o"
+	@echo "... remap3d_kokkos.i"
+	@echo "... remap3d_kokkos.s"
+	@echo "... surf_collide_diffuse_kokkos.o"
+	@echo "... surf_collide_diffuse_kokkos.i"
+	@echo "... surf_collide_diffuse_kokkos.s"
+	@echo "... surf_collide_piston_kokkos.o"
+	@echo "... surf_collide_piston_kokkos.i"
+	@echo "... surf_collide_piston_kokkos.s"
+	@echo "... surf_collide_specular_kokkos.o"
+	@echo "... surf_collide_specular_kokkos.i"
+	@echo "... surf_collide_specular_kokkos.s"
+	@echo "... surf_collide_transparent_kokkos.o"
+	@echo "... surf_collide_transparent_kokkos.i"
+	@echo "... surf_collide_transparent_kokkos.s"
+	@echo "... surf_collide_vanish_kokkos.o"
+	@echo "... surf_collide_vanish_kokkos.i"
+	@echo "... surf_collide_vanish_kokkos.s"
+	@echo "... surf_custom_kokkos.o"
+	@echo "... surf_custom_kokkos.i"
+	@echo "... surf_custom_kokkos.s"
+	@echo "... surf_kokkos.o"
+	@echo "... surf_kokkos.i"
+	@echo "... surf_kokkos.s"
+	@echo "... surf_react_global_kokkos.o"
+	@echo "... surf_react_global_kokkos.i"
+	@echo "... surf_react_global_kokkos.s"
+	@echo "... surf_react_prob_kokkos.o"
+	@echo "... surf_react_prob_kokkos.i"
+	@echo "... surf_react_prob_kokkos.s"
+	@echo "... update_kokkos.o"
+	@echo "... update_kokkos.i"
+	@echo "... update_kokkos.s"
+	@echo "... variable_kokkos.o"
+	@echo "... variable_kokkos.i"
+	@echo "... variable_kokkos.s"
 .PHONY : help
 
 

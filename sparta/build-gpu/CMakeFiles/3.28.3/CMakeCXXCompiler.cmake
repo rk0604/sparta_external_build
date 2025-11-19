@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/c++")
+set(CMAKE_CXX_COMPILER "/common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "13.3.0")
@@ -50,7 +50,7 @@ endforeach()
 
 set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
-set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED TRUE)
+set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED FALSE)
 
 # Save compiler ABI information.
 set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
@@ -79,7 +79,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/local/cuda-12.6/targets/x86_64-linux/include;/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "cudadevrt;cudart_static;rt;pthread;dl;stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs;/usr/local/cuda-12.6/targets/x86_64-linux/lib;/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

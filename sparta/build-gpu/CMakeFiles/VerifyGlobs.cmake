@@ -325,3 +325,204 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
   file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
 endif()
+
+# SPARTA_PKG_FFT_SRC_FILES at /common/home/rvk22/opt/sparta/src/FFT/CMakeLists.txt:6 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/FFT/*.cpp")
+set(OLD_GLOB
+  "/common/home/rvk22/opt/sparta/src/FFT/compute_fft_grid.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft2d.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft2d_wrap.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft3d.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft3d_wrap.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/remap2d.cpp"
+  "/common/home/rvk22/opt/sparta/src/FFT/remap3d.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SPARTA_PKG_FFT_SRC_FILES at /common/home/rvk22/opt/sparta/src/FFT/CMakeLists.txt:6 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/FFT/*.h")
+set(OLD_GLOB
+  "/common/home/rvk22/opt/sparta/src/FFT/compute_fft_grid.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft2d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft2d_wrap.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft3d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/fft3d_wrap.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/fftdata.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/kissfft.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/pack2d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/pack3d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/remap2d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/remap3d.h"
+  "/common/home/rvk22/opt/sparta/src/FFT/spafftsettings.h"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SPARTA_PKG_FFT_SRC_FILES at /common/home/rvk22/opt/sparta/src/FFT/CMakeLists.txt:6 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/FFT/*.hpp")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SPARTA_PKG_KOKKOS_SRC_FILES at /common/home/rvk22/opt/sparta/src/KOKKOS/CMakeLists.txt:64 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/KOKKOS/*.cpp")
+set(OLD_GLOB
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/collide_vss_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/comm_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_boundary_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_count_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_distsurf_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_dt_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_eflux_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_fft_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_ke_particle_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_lambda_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_pflux_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_property_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_sonine_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_surf_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_temp_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_thermal_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_tvib_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/create_particles_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/domain_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fft2d_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fft3d_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_adapt_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ambipolar_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_histo_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_histo_weight_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_balance_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_dt_reset_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_emit_face_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_grid_check_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_move_surf_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_surf_temp_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_temp_rescale_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_vibmode_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/grid_custom_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/grid_id_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/grid_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/irregular_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos_scan.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/modify_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/particle_custom_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/particle_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/rand_pool_wrap.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/react_bird_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/react_tce_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/read_surf_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/remap2d_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/remap3d_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_diffuse_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_piston_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_specular_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_transparent_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_vanish_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_custom_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_react_global_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_react_prob_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/update_kokkos.cpp"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/variable_kokkos.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SPARTA_PKG_KOKKOS_SRC_FILES at /common/home/rvk22/opt/sparta/src/KOKKOS/CMakeLists.txt:64 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/KOKKOS/*.h")
+set(OLD_GLOB
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/collide_vss_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/comm_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_boundary_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_count_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_distsurf_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_dt_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_eflux_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_fft_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_ke_particle_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_lambda_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_pflux_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_property_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_sonine_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_surf_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_temp_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_thermal_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/compute_tvib_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/create_particles_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/domain_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fft2d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fft3d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fftdata_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_adapt_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ambipolar_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_histo_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_ave_histo_weight_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_balance_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_dt_reset_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_emit_face_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_grid_check_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_move_surf_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_surf_temp_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_temp_rescale_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/fix_vibmode_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/geometry_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/grid_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/irregular_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kissfft_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos_base.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos_base_fft.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos_copy.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/kokkos_type.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/math_extra_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/memory_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/modify_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/pack2d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/pack3d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/particle_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/rand_pool_wrap.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/react_bird_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/react_tce_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/read_surf_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/remap2d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/remap3d_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_diffuse_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_piston_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_specular_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_transparent_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_collide_vanish_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_react_global_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/surf_react_prob_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/update_kokkos.h"
+  "/common/home/rvk22/opt/sparta/src/KOKKOS/variable_kokkos.h"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SPARTA_PKG_KOKKOS_SRC_FILES at /common/home/rvk22/opt/sparta/src/KOKKOS/CMakeLists.txt:64 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES false "/common/home/rvk22/opt/sparta/src/KOKKOS/*.hpp")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/cmake.verify_globs")
+endif()

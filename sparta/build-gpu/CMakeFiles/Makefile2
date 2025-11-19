@@ -143,7 +143,7 @@ src/clean: src/PYTHON/clean
 # Directory level rules for directory src/FFT
 
 # Recursive "all" directory target.
-src/FFT/all:
+src/FFT/all: src/FFT/CMakeFiles/pkg_fft.dir/all
 .PHONY : src/FFT/all
 
 # Recursive "preinstall" directory target.
@@ -151,23 +151,236 @@ src/FFT/preinstall:
 .PHONY : src/FFT/preinstall
 
 # Recursive "clean" directory target.
-src/FFT/clean:
+src/FFT/clean: src/FFT/CMakeFiles/pkg_fft.dir/clean
 .PHONY : src/FFT/clean
 
 #=============================================================================
 # Directory level rules for directory src/KOKKOS
 
 # Recursive "all" directory target.
-src/KOKKOS/all:
+src/KOKKOS/all: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all
+src/KOKKOS/all: src/KOKKOS/lib/kokkos/all
 .PHONY : src/KOKKOS/all
 
 # Recursive "preinstall" directory target.
-src/KOKKOS/preinstall:
+src/KOKKOS/preinstall: src/KOKKOS/lib/kokkos/preinstall
 .PHONY : src/KOKKOS/preinstall
 
 # Recursive "clean" directory target.
-src/KOKKOS/clean:
+src/KOKKOS/clean: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/clean
+src/KOKKOS/clean: src/KOKKOS/lib/kokkos/clean
 .PHONY : src/KOKKOS/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/core/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/containers/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/algorithms/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/simd/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/example/all
+src/KOKKOS/lib/kokkos/all: src/KOKKOS/lib/kokkos/benchmarks/all
+.PHONY : src/KOKKOS/lib/kokkos/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/core/preinstall
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/containers/preinstall
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/algorithms/preinstall
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/simd/preinstall
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/example/preinstall
+src/KOKKOS/lib/kokkos/preinstall: src/KOKKOS/lib/kokkos/benchmarks/preinstall
+.PHONY : src/KOKKOS/lib/kokkos/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/core/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/containers/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/algorithms/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/simd/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/example/clean
+src/KOKKOS/lib/kokkos/clean: src/KOKKOS/lib/kokkos/benchmarks/clean
+.PHONY : src/KOKKOS/lib/kokkos/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/algorithms
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/algorithms/all: src/KOKKOS/lib/kokkos/algorithms/src/all
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/algorithms/preinstall: src/KOKKOS/lib/kokkos/algorithms/src/preinstall
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/algorithms/clean: src/KOKKOS/lib/kokkos/algorithms/src/clean
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/algorithms/src
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/algorithms/src/all:
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/src/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/algorithms/src/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/src/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/algorithms/src/clean:
+.PHONY : src/KOKKOS/lib/kokkos/algorithms/src/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/benchmarks
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/benchmarks/all:
+.PHONY : src/KOKKOS/lib/kokkos/benchmarks/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/benchmarks/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/benchmarks/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/benchmarks/clean:
+.PHONY : src/KOKKOS/lib/kokkos/benchmarks/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/containers
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/containers/all: src/KOKKOS/lib/kokkos/containers/src/all
+.PHONY : src/KOKKOS/lib/kokkos/containers/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/containers/preinstall: src/KOKKOS/lib/kokkos/containers/src/preinstall
+.PHONY : src/KOKKOS/lib/kokkos/containers/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/containers/clean: src/KOKKOS/lib/kokkos/containers/src/clean
+.PHONY : src/KOKKOS/lib/kokkos/containers/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/containers/src
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/containers/src/all: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/containers/src/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/containers/src/clean: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/core
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/core/all: src/KOKKOS/lib/kokkos/core/src/all
+.PHONY : src/KOKKOS/lib/kokkos/core/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/core/preinstall: src/KOKKOS/lib/kokkos/core/src/preinstall
+.PHONY : src/KOKKOS/lib/kokkos/core/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/core/clean: src/KOKKOS/lib/kokkos/core/src/clean
+.PHONY : src/KOKKOS/lib/kokkos/core/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/core/src
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/core/src/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+.PHONY : src/KOKKOS/lib/kokkos/core/src/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/core/src/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/core/src/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/core/src/clean: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/core/src/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/example
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/example/all:
+.PHONY : src/KOKKOS/lib/kokkos/example/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/example/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/example/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/example/clean:
+.PHONY : src/KOKKOS/lib/kokkos/example/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/simd
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/simd/all: src/KOKKOS/lib/kokkos/simd/src/all
+.PHONY : src/KOKKOS/lib/kokkos/simd/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/simd/preinstall: src/KOKKOS/lib/kokkos/simd/src/preinstall
+.PHONY : src/KOKKOS/lib/kokkos/simd/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/simd/clean: src/KOKKOS/lib/kokkos/simd/src/clean
+.PHONY : src/KOKKOS/lib/kokkos/simd/clean
+
+#=============================================================================
+# Directory level rules for directory src/KOKKOS/lib/kokkos/simd/src
+
+# Recursive "all" directory target.
+src/KOKKOS/lib/kokkos/simd/src/all: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/all
+
+# Recursive "preinstall" directory target.
+src/KOKKOS/lib/kokkos/simd/src/preinstall:
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/preinstall
+
+# Recursive "clean" directory target.
+src/KOKKOS/lib/kokkos/simd/src/clean: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/clean
 
 #=============================================================================
 # Directory level rules for directory src/PYTHON
@@ -204,9 +417,14 @@ src/STUBS/clean:
 
 # All Build rule for target.
 src/CMakeFiles/sparta_.dir/all: src/CMakeFiles/sparta__PRE_BUILD.dir/all
+src/CMakeFiles/sparta_.dir/all: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all
+src/CMakeFiles/sparta_.dir/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+src/CMakeFiles/sparta_.dir/all: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+src/CMakeFiles/sparta_.dir/all: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+src/CMakeFiles/sparta_.dir/all: src/FFT/CMakeFiles/pkg_fft.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/sparta_.dir/build.make src/CMakeFiles/sparta_.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/sparta_.dir/build.make src/CMakeFiles/sparta_.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sparta_"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sparta_"
 .PHONY : src/CMakeFiles/sparta_.dir/all
 
 # Build rule for subdir invocation for target.
@@ -256,9 +474,14 @@ src/CMakeFiles/sparta__PRE_BUILD.dir/clean:
 
 # All Build rule for target.
 src/CMakeFiles/spa_.dir/all: src/CMakeFiles/sparta_.dir/all
+src/CMakeFiles/spa_.dir/all: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all
+src/CMakeFiles/spa_.dir/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+src/CMakeFiles/spa_.dir/all: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+src/CMakeFiles/spa_.dir/all: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+src/CMakeFiles/spa_.dir/all: src/FFT/CMakeFiles/pkg_fft.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/spa_.dir/build.make src/CMakeFiles/spa_.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/spa_.dir/build.make src/CMakeFiles/spa_.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=1 "Built target spa_"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=40 "Built target spa_"
 .PHONY : src/CMakeFiles/spa_.dir/all
 
 # Build rule for subdir invocation for target.
@@ -276,6 +499,920 @@ spa_: src/CMakeFiles/spa_.dir/rule
 src/CMakeFiles/spa_.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/spa_.dir/build.make src/CMakeFiles/spa_.dir/clean
 .PHONY : src/CMakeFiles/spa_.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/CMakeFiles/pkg_kokkos.dir
+
+# All Build rule for target.
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target pkg_kokkos"
+.PHONY : src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 36
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/CMakeFiles/pkg_kokkos.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule
+
+# Convenience name for target.
+pkg_kokkos: src/KOKKOS/CMakeFiles/pkg_kokkos.dir/rule
+.PHONY : pkg_kokkos
+
+# clean rule for target.
+src/KOKKOS/CMakeFiles/pkg_kokkos.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/CMakeFiles/pkg_kokkos.dir/build.make src/KOKKOS/CMakeFiles/pkg_kokkos.dir/clean
+.PHONY : src/KOKKOS/CMakeFiles/pkg_kokkos.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target Experimental"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/rule
+
+# Convenience name for target.
+Experimental: src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/rule
+.PHONY : Experimental
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Experimental.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target Nightly"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/rule
+
+# Convenience name for target.
+Nightly: src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/rule
+.PHONY : Nightly
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Nightly.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target Continuous"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/rule
+
+# Convenience name for target.
+Continuous: src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/rule
+.PHONY : Continuous
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/Continuous.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemoryCheck: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/rule
+.PHONY : NightlyMemoryCheck
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemoryCheck.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyStart"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/rule
+
+# Convenience name for target.
+NightlyStart: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/rule
+.PHONY : NightlyStart
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyStart.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyUpdate"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/rule
+
+# Convenience name for target.
+NightlyUpdate: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/rule
+.PHONY : NightlyUpdate
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyUpdate.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyConfigure"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/rule
+
+# Convenience name for target.
+NightlyConfigure: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/rule
+.PHONY : NightlyConfigure
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyConfigure.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyBuild"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/rule
+
+# Convenience name for target.
+NightlyBuild: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/rule
+.PHONY : NightlyBuild
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyBuild.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyTest"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/rule
+
+# Convenience name for target.
+NightlyTest: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/rule
+.PHONY : NightlyTest
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyTest.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyCoverage"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/rule
+
+# Convenience name for target.
+NightlyCoverage: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/rule
+.PHONY : NightlyCoverage
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyCoverage.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlyMemCheck"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemCheck: src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/rule
+.PHONY : NightlyMemCheck
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlyMemCheck.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target NightlySubmit"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/rule
+
+# Convenience name for target.
+NightlySubmit: src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/rule
+.PHONY : NightlySubmit
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/NightlySubmit.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalStart"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/rule
+
+# Convenience name for target.
+ExperimentalStart: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/rule
+.PHONY : ExperimentalStart
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalStart.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/rule
+
+# Convenience name for target.
+ExperimentalUpdate: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/rule
+.PHONY : ExperimentalUpdate
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalUpdate.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/rule
+
+# Convenience name for target.
+ExperimentalConfigure: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/rule
+.PHONY : ExperimentalConfigure
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalConfigure.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalBuild"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/rule
+
+# Convenience name for target.
+ExperimentalBuild: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/rule
+.PHONY : ExperimentalBuild
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalBuild.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalTest"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/rule
+
+# Convenience name for target.
+ExperimentalTest: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/rule
+.PHONY : ExperimentalTest
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalTest.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/rule
+
+# Convenience name for target.
+ExperimentalCoverage: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/rule
+.PHONY : ExperimentalCoverage
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalCoverage.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/rule
+
+# Convenience name for target.
+ExperimentalMemCheck: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/rule
+.PHONY : ExperimentalMemCheck
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalMemCheck.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/rule
+
+# Convenience name for target.
+ExperimentalSubmit: src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/rule
+.PHONY : ExperimentalSubmit
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ExperimentalSubmit.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousStart"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/rule
+
+# Convenience name for target.
+ContinuousStart: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/rule
+.PHONY : ContinuousStart
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousStart.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousUpdate"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/rule
+
+# Convenience name for target.
+ContinuousUpdate: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/rule
+.PHONY : ContinuousUpdate
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousUpdate.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousConfigure"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/rule
+
+# Convenience name for target.
+ContinuousConfigure: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/rule
+.PHONY : ContinuousConfigure
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousConfigure.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousBuild"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/rule
+
+# Convenience name for target.
+ContinuousBuild: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/rule
+.PHONY : ContinuousBuild
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousBuild.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousTest"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/rule
+
+# Convenience name for target.
+ContinuousTest: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/rule
+.PHONY : ContinuousTest
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousTest.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousCoverage"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/rule
+
+# Convenience name for target.
+ContinuousCoverage: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/rule
+.PHONY : ContinuousCoverage
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousCoverage.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/rule
+
+# Convenience name for target.
+ContinuousMemCheck: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/rule
+.PHONY : ContinuousMemCheck
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousMemCheck.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target ContinuousSubmit"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/rule
+
+# Convenience name for target.
+ContinuousSubmit: src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/rule
+.PHONY : ContinuousSubmit
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/ContinuousSubmit.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target AlwaysCheckGit"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/rule
+
+# Convenience name for target.
+AlwaysCheckGit: src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/rule
+.PHONY : AlwaysCheckGit
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/all: src/KOKKOS/lib/kokkos/CMakeFiles/AlwaysCheckGit.dir/all
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num= "Built target impl_git_version"
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/rule
+
+# Convenience name for target.
+impl_git_version: src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/rule
+.PHONY : impl_git_version
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/build.make src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/CMakeFiles/impl_git_version.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10 "Built target kokkoscore"
+.PHONY : src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/rule
+
+# Convenience name for target.
+kokkoscore: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/rule
+.PHONY : kokkoscore
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/build.make src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/build.make src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=1 "Built target kokkoscontainers"
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/rule
+
+# Convenience name for target.
+kokkoscontainers: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/rule
+.PHONY : kokkoscontainers
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/build.make src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/clean
+
+#=============================================================================
+# Target rules for target src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir
+
+# All Build rule for target.
+src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/build.make src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/build.make src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=11 "Built target kokkossimd"
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+
+# Build rule for subdir invocation for target.
+src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/rule
+
+# Convenience name for target.
+kokkossimd: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/rule
+.PHONY : kokkossimd
+
+# clean rule for target.
+src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/build.make src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/clean
+.PHONY : src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/clean
+
+#=============================================================================
+# Target rules for target src/FFT/CMakeFiles/pkg_fft.dir
+
+# All Build rule for target.
+src/FFT/CMakeFiles/pkg_fft.dir/all: src/KOKKOS/lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all
+src/FFT/CMakeFiles/pkg_fft.dir/all: src/KOKKOS/lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/all
+src/FFT/CMakeFiles/pkg_fft.dir/all: src/KOKKOS/lib/kokkos/simd/src/CMakeFiles/kokkossimd.dir/all
+	$(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles --progress-num=12,13,14 "Built target pkg_fft"
+.PHONY : src/FFT/CMakeFiles/pkg_fft.dir/all
+
+# Build rule for subdir invocation for target.
+src/FFT/CMakeFiles/pkg_fft.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/FFT/CMakeFiles/pkg_fft.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /common/home/rvk22/opt/sparta/build-gpu/CMakeFiles 0
+.PHONY : src/FFT/CMakeFiles/pkg_fft.dir/rule
+
+# Convenience name for target.
+pkg_fft: src/FFT/CMakeFiles/pkg_fft.dir/rule
+.PHONY : pkg_fft
+
+# clean rule for target.
+src/FFT/CMakeFiles/pkg_fft.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/FFT/CMakeFiles/pkg_fft.dir/build.make src/FFT/CMakeFiles/pkg_fft.dir/clean
+.PHONY : src/FFT/CMakeFiles/pkg_fft.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

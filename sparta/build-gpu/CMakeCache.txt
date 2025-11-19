@@ -18,7 +18,7 @@
 BUILD_JPEG:BOOL=OFF
 
 //Enable or disable KOKKOS TPL. Default: OFF.
-BUILD_KOKKOS:BOOL=OFF
+BUILD_KOKKOS:BOOL=ON
 
 //Enable or disable MPI TPL. Assumes environment has MPI_ROOT set.
 // Default: ON.
@@ -27,9 +27,11 @@ BUILD_MPI:BOOL=ON
 //Enable or disable PNG TPL. Default: OFF.
 BUILD_PNG:BOOL=OFF
 
-//Enable or disable building of sparta as a shared library. Default:
-// OFF.
+//Build shared libraries
 BUILD_SHARED_LIBS:BOOL=OFF
+
+//Build the testing tree.
+BUILD_TESTING:BOOL=ON
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -39,19 +41,19 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //No help, variable specified on the command line.
-CMAKE_CUDA_ARCHITECTURES:UNINITIALIZED=89
+CMAKE_CUDA_ARCHITECTURES:UNINITIALIZED=86
 
 //No help, variable specified on the command line.
-CMAKE_CUDA_COMPILER:UNINITIALIZED=/usr/local/cuda/bin/nvcc
+CMAKE_CUDA_COMPILER:UNINITIALIZED=/usr/local/cuda-12.6/bin/nvcc
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -61,7 +63,7 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
 // for the GCC compiler
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
 
-//Use compiler extensions
+//Kokkos turns off CXX extensions
 CMAKE_CXX_EXTENSIONS:BOOL=OFF
 
 //Flags used by the CXX compiler during all build types.
@@ -129,8 +131,56 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/common/home/rvk22/opt/sparta/build-gpu/CMakeFiles/pkgRedirects
 
+//User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+//Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+//Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
+
+//Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+//System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -241,18 +291,621 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to the coverage program that CTest uses for performing coverage
+// inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+//Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+//How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+CUDAToolkit_BIN_DIR:PATH=/usr/local/cuda-12.6/bin
+
+//Path to a file.
+CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/usr/local/cuda-12.6/targets/x86_64-linux/include
+
+//Path to a program.
+CUDAToolkit_NVCC_EXECUTABLE:FILEPATH=/usr/local/cuda-12.6/bin/nvcc
+
+//Path to a library.
+CUDAToolkit_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
+
+//Path to a library.
+CUDA_CUDART:FILEPATH=/usr/local/cuda-12.6/lib64/libcudart.so
+
+//Path to a library.
+CUDA_OpenCL_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libOpenCL.so
+
+//Path to a library.
+CUDA_cuFile_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufile.so
+
+//Path to a library.
+CUDA_cuFile_rdma_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufile_rdma.so
+
+//Path to a library.
+CUDA_cuFile_rdma_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufile_rdma_static.a
+
+//Path to a library.
+CUDA_cuFile_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufile_static.a
+
+//Path to a library.
+CUDA_cublasLt_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcublasLt.so
+
+//Path to a library.
+CUDA_cublasLt_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcublasLt_static.a
+
+//Path to a library.
+CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcublas.so
+
+//Path to a library.
+CUDA_cublas_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcublas_static.a
+
+//Path to a library.
+CUDA_cuda_driver_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs/libcuda.so
+
+//Path to a library.
+CUDA_cudart_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcudart.so
+
+//Path to a library.
+CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcudart_static.a
+
+//Path to a library.
+CUDA_cudla_LIBRARY:FILEPATH=CUDA_cudla_LIBRARY-NOTFOUND
+
+//Path to a library.
+CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufft.so
+
+//Path to a library.
+CUDA_cufft_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufft_static.a
+
+//Path to a library.
+CUDA_cufft_static_nocallback_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufft_static_nocallback.a
+
+//Path to a library.
+CUDA_cufftw_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufftw.so
+
+//Path to a library.
+CUDA_cufftw_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcufftw_static.a
+
+//Path to a library.
+CUDA_culibos_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libculibos.a
+
+//Path to a library.
+CUDA_cupti_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcupti.so
+
+//Path to a library.
+CUDA_cupti_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcupti_static.a
+
+//Path to a library.
+CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcurand.so
+
+//Path to a library.
+CUDA_curand_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcurand_static.a
+
+//Path to a library.
+CUDA_cusolver_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusolver.so
+
+//Path to a library.
+CUDA_cusolver_lapack_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusolver_lapack_static.a
+
+//Path to a library.
+CUDA_cusolver_metis_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusolver_metis_static.a
+
+//Path to a library.
+CUDA_cusolver_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusolver_static.a
+
+//Path to a library.
+CUDA_cusparse_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusparse.so
+
+//Path to a library.
+CUDA_cusparse_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libcusparse_static.a
+
+//Path to a library.
+CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppc.so
+
+//Path to a library.
+CUDA_nppc_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppc_static.a
+
+//Path to a library.
+CUDA_nppial_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppial.so
+
+//Path to a library.
+CUDA_nppial_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppial_static.a
+
+//Path to a library.
+CUDA_nppicc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppicc.so
+
+//Path to a library.
+CUDA_nppicc_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppicc_static.a
+
+//Path to a library.
+CUDA_nppicom_LIBRARY:FILEPATH=CUDA_nppicom_LIBRARY-NOTFOUND
+
+//Path to a library.
+CUDA_nppicom_static_LIBRARY:FILEPATH=CUDA_nppicom_static_LIBRARY-NOTFOUND
+
+//Path to a library.
+CUDA_nppidei_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppidei.so
+
+//Path to a library.
+CUDA_nppidei_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppidei_static.a
+
+//Path to a library.
+CUDA_nppif_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppif.so
+
+//Path to a library.
+CUDA_nppif_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppif_static.a
+
+//Path to a library.
+CUDA_nppig_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppig.so
+
+//Path to a library.
+CUDA_nppig_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppig_static.a
+
+//Path to a library.
+CUDA_nppim_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppim.so
+
+//Path to a library.
+CUDA_nppim_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppim_static.a
+
+//Path to a library.
+CUDA_nppist_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppist.so
+
+//Path to a library.
+CUDA_nppist_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppist_static.a
+
+//Path to a library.
+CUDA_nppisu_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppisu.so
+
+//Path to a library.
+CUDA_nppisu_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppisu_static.a
+
+//Path to a library.
+CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppitc.so
+
+//Path to a library.
+CUDA_nppitc_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnppitc_static.a
+
+//Path to a library.
+CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnpps.so
+
+//Path to a library.
+CUDA_npps_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnpps_static.a
+
+//Path to a library.
+CUDA_nvJitLink_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvJitLink.so
+
+//Path to a library.
+CUDA_nvJitLink_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvJitLink_static.a
+
+//Path to a library.
+CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvToolsExt.so
+
+//Path to a library.
+CUDA_nvgraph_LIBRARY:FILEPATH=CUDA_nvgraph_LIBRARY-NOTFOUND
+
+//Path to a library.
+CUDA_nvgraph_static_LIBRARY:FILEPATH=CUDA_nvgraph_static_LIBRARY-NOTFOUND
+
+//Path to a library.
+CUDA_nvjpeg_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvjpeg.so
+
+//Path to a library.
+CUDA_nvjpeg_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvjpeg_static.a
+
+//Path to a library.
+CUDA_nvml_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs/libnvidia-ml.so
+
+//Path to a library.
+CUDA_nvperf_host_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvperf_host.so
+
+//Path to a library.
+CUDA_nvperf_host_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvperf_host_static.a
+
+//Path to a library.
+CUDA_nvperf_target_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvperf_target.so
+
+//Path to a library.
+CUDA_nvptxcompiler_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvptxcompiler_static.a
+
+//Path to a library.
+CUDA_nvrtc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvrtc.so
+
+//Path to a library.
+CUDA_nvrtc_builtins_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvrtc-builtins.so
+
+//Path to a library.
+CUDA_nvrtc_builtins_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvrtc-builtins_static.a
+
+//Path to a library.
+CUDA_nvrtc_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libnvrtc_static.a
+
+//Path to a library.
+CUDA_pcsamplingutil_LIBRARY:FILEPATH=/usr/local/cuda-12.6/targets/x86_64-linux/lib/libpcsamplingutil.so
+
+//Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
 //Select a FFT TPL from FFTW3, MKL, or KISS. Default: KISS.
-FFT:STRING=OFF
+FFT:STRING=KISS
 
 //Select a FFT TPL for Kokkos from CUFFT, HIPFFT, FFTW3, MKL, or
 // KISS. Default: KISS.
-FFT_KOKKOS:STRING=OFF
+FFT_KOKKOS:STRING=KISS
 
-//No help, variable specified on the command line.
-Kokkos_ARCH_ADA89:UNINITIALIZED=ON
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
-//No help, variable specified on the command line.
-Kokkos_ENABLE_CUDA:UNINITIALIZED=ON
+//INTERNAL
+KOKKOS_CXX_COMPILER_ID:STRING=NVIDIA
+
+//INTERNAL
+KOKKOS_CXX_COMPILER_VERSION:STRING=12.6.85
+
+//Optimize for ARMv8.2 with SVE Support (HOST)
+Kokkos_ARCH_A64FX:BOOL=OFF
+
+//Optimize for NVIDIA Ada generation CC 8.9 (GPU)
+Kokkos_ARCH_ADA89:BOOL=ON
+
+//Optimize for AMD chip (HOST)
+Kokkos_ARCH_AMDAVX:BOOL=OFF
+
+//Optimize for NVIDIA Ampere generation CC 8.0 (GPU)
+Kokkos_ARCH_AMPERE80:BOOL=OFF
+
+//Optimize for NVIDIA Ampere generation CC 8.6 (GPU)
+Kokkos_ARCH_AMPERE86:BOOL=OFF
+
+//Optimize for ARMv8.0 Compatible CPU (HOST)
+Kokkos_ARCH_ARMV80:BOOL=OFF
+
+//Optimize for ARMv8.1 Compatible CPU (HOST)
+Kokkos_ARCH_ARMV81:BOOL=OFF
+
+//Optimize for ARMv8 Cavium ThunderX CPU (HOST)
+Kokkos_ARCH_ARMV8_THUNDERX:BOOL=OFF
+
+//Optimize for ARMv8 Cavium ThunderX2 CPU (HOST)
+Kokkos_ARCH_ARMV8_THUNDERX2:BOOL=OFF
+
+//Optimize for ARMv9 NVIDIA Grace CPU (HOST)
+Kokkos_ARCH_ARMV9_GRACE:BOOL=OFF
+
+//Optimize for Intel Broadwell Xeon E-class CPUs (HOST)
+Kokkos_ARCH_BDW:BOOL=OFF
+
+//Optimize for NVIDIA Blackwell generation CC 10.0 (GPU)
+Kokkos_ARCH_BLACKWELL100:BOOL=OFF
+
+//Optimize for NVIDIA Blackwell generation CC 12.0 (GPU)
+Kokkos_ARCH_BLACKWELL120:BOOL=OFF
+
+//Optimize for NVIDIA Hopper generation CC 9.0 (GPU)
+Kokkos_ARCH_HOPPER90:BOOL=OFF
+
+//Optimize for Intel Haswell CPUs (HOST)
+Kokkos_ARCH_HSW:BOOL=OFF
+
+//Optimize for Intel Ice Lake Client CPUs (AVX512) (HOST)
+Kokkos_ARCH_ICL:BOOL=OFF
+
+//Optimize for Intel Ice Lake Xeon Server CPUs (AVX512) (HOST)
+Kokkos_ARCH_ICX:BOOL=OFF
+
+//Optimize for NVIDIA Kepler generation CC 3.0 (GPU)
+Kokkos_ARCH_KEPLER30:BOOL=OFF
+
+//Optimize for NVIDIA Kepler generation CC 3.2 (GPU)
+Kokkos_ARCH_KEPLER32:BOOL=OFF
+
+//Optimize for NVIDIA Kepler generation CC 3.5 (GPU)
+Kokkos_ARCH_KEPLER35:BOOL=OFF
+
+//Optimize for NVIDIA Kepler generation CC 3.7 (GPU)
+Kokkos_ARCH_KEPLER37:BOOL=OFF
+
+//Optimize for Intel Knights Corner Xeon Phi (HOST)
+Kokkos_ARCH_KNC:BOOL=OFF
+
+//Optimize for Intel Knights Landing Xeon Phi (HOST)
+Kokkos_ARCH_KNL:BOOL=OFF
+
+//Optimize for NVIDIA Maxwell generation CC 5.0 (GPU)
+Kokkos_ARCH_MAXWELL50:BOOL=OFF
+
+//Optimize for NVIDIA Maxwell generation CC 5.2 (GPU)
+Kokkos_ARCH_MAXWELL52:BOOL=OFF
+
+//Optimize for NVIDIA Maxwell generation CC 5.3 (GPU)
+Kokkos_ARCH_MAXWELL53:BOOL=OFF
+
+//Optimize for local machine (HOST)
+Kokkos_ARCH_NATIVE:BOOL=OFF
+
+//Optimize for NVIDIA Pascal generation CC 6.0 (GPU)
+Kokkos_ARCH_PASCAL60:BOOL=OFF
+
+//Optimize for NVIDIA Pascal generation CC 6.1 (GPU)
+Kokkos_ARCH_PASCAL61:BOOL=OFF
+
+//Optimize for IBM POWER8 CPUs (HOST)
+Kokkos_ARCH_POWER8:BOOL=OFF
+
+//Optimize for IBM POWER9 CPUs (HOST)
+Kokkos_ARCH_POWER9:BOOL=OFF
+
+//Optimize for RVA22V (RISC-V) CPUs (HOST)
+Kokkos_ARCH_RISCV_RVA22V:BOOL=OFF
+
+//Optimize for SG2042 (RISC-V) CPUs (HOST)
+Kokkos_ARCH_RISCV_SG2042:BOOL=OFF
+
+//Optimize for Intel Skylake Client CPUs (HOST)
+Kokkos_ARCH_SKL:BOOL=OFF
+
+//Optimize for Intel Skylake Xeon Server CPUs (AVX512) (HOST)
+Kokkos_ARCH_SKX:BOOL=OFF
+
+//Optimize for Intel Sandy/Ivy Bridge CPUs (HOST)
+Kokkos_ARCH_SNB:BOOL=OFF
+
+//Optimize for Intel Sapphire Rapids Xeon Server CPUs (AVX512)
+// (HOST)
+Kokkos_ARCH_SPR:BOOL=OFF
+
+//Optimize for NVIDIA Turing generation CC 7.5 (GPU)
+Kokkos_ARCH_TURING75:BOOL=OFF
+
+//Optimize for NVIDIA Volta generation CC 7.0 (GPU)
+Kokkos_ARCH_VOLTA70:BOOL=OFF
+
+//Optimize for NVIDIA Volta generation CC 7.2 (GPU)
+Kokkos_ARCH_VOLTA72:BOOL=OFF
+
+//Optimize for AMD Zen architecture (HOST)
+Kokkos_ARCH_ZEN:BOOL=OFF
+
+//Optimize for AMD Zen2 architecture (HOST)
+Kokkos_ARCH_ZEN2:BOOL=OFF
+
+//Optimize for AMD Zen3 architecture (HOST)
+Kokkos_ARCH_ZEN3:BOOL=OFF
+
+//Optimize for AMD Zen4 architecture (HOST)
+Kokkos_ARCH_ZEN4:BOOL=OFF
+
+//Value Computed by CMake
+Kokkos_BINARY_DIR:STATIC=/common/home/rvk22/opt/sparta/build-gpu/src/KOKKOS/lib/kokkos
+
+//Path to a program.
+Kokkos_COMPILE_LAUNCHER:FILEPATH=/common/home/rvk22/opt/sparta/lib/kokkos/bin/kokkos_launch_compiler
+
+//Location of CUDA library
+Kokkos_CUDA_DIR:PATH=
+
+//[[DEPRECATED - USE CMAKE_CXX_STANDARD INSTEAD]] The C++ standard
+// for Kokkos to use: 17 or 20. If empty, this will default to
+// CMAKE_CXX_STANDARD. If both CMAKE_CXX_STANDARD and Kokkos_CXX_STANDARD
+// are empty, this will default to 17
+Kokkos_CXX_STANDARD:STRING=
+
+//Whether to aggressively vectorize loops
+Kokkos_ENABLE_AGGRESSIVE_VECTORIZATION:BOOL=OFF
+
+//**NOT RECOMMENDED** Whether to make atomics non-atomic for non-threaded
+// MPI-only use cases
+Kokkos_ENABLE_ATOMICS_BYPASS:BOOL=OFF
+
+//Whether to build the benchmarks
+Kokkos_ENABLE_BENCHMARKS:BOOL=OFF
+
+//Whether to print all compiler warnings
+Kokkos_ENABLE_COMPILER_WARNINGS:BOOL=OFF
+
+//Whether to use native cmake language support
+Kokkos_ENABLE_COMPILE_AS_CMAKE_LANGUAGE:BOOL=OFF
+
+//Whether to align Kokkos::complex to 2*alignof(RealType)
+Kokkos_ENABLE_COMPLEX_ALIGN:BOOL=ON
+
+//Whether to build CUDA backend
+Kokkos_ENABLE_CUDA:BOOL=ON
+
+//Whether to activate experimental relaxed constexpr functions
+Kokkos_ENABLE_CUDA_CONSTEXPR:BOOL=OFF
+
+//Whether to allow lambda expressions on the device with NVCC **DEPRECATED**
+Kokkos_ENABLE_CUDA_LAMBDA:BOOL=ON
+
+//Whether to use CUDA LDG intrinsics
+Kokkos_ENABLE_CUDA_LDG_INTRINSIC:BOOL=OFF
+
+//Whether to enable relocatable device code (RDC) for CUDA
+Kokkos_ENABLE_CUDA_RELOCATABLE_DEVICE_CODE:BOOL=OFF
+
+//Whether to use unified memory (UM) for CUDA by default
+Kokkos_ENABLE_CUDA_UVM:BOOL=OFF
+
+//Whether to activate extra debug features - may increase compile
+// times
+Kokkos_ENABLE_DEBUG:BOOL=OFF
+
+//Whether to use bounds checking - will increase runtime
+Kokkos_ENABLE_DEBUG_BOUNDS_CHECK:BOOL=OFF
+
+//Debug check on dual views
+Kokkos_ENABLE_DEBUG_DUALVIEW_MODIFY_CHECK:BOOL=OFF
+
+//Whether code deprecated in major release 4 is available
+Kokkos_ENABLE_DEPRECATED_CODE_4:BOOL=ON
+
+//Whether to emit deprecation warnings
+Kokkos_ENABLE_DEPRECATION_WARNINGS:BOOL=ON
+
+//Whether to use an external desul installation
+Kokkos_ENABLE_DESUL_ATOMICS_EXTERNAL:BOOL=OFF
+
+//Whether to build the examples
+Kokkos_ENABLE_EXAMPLES:BOOL=OFF
+
+//Enable header self-containment unit tests
+Kokkos_ENABLE_HEADER_SELF_CONTAINMENT_TESTS:BOOL=OFF
+
+//Whether to build HIP backend
+Kokkos_ENABLE_HIP:BOOL=OFF
+
+//Whether multiple kernels are instantiated at compile time - improve
+// performance but increase compile time
+Kokkos_ENABLE_HIP_MULTIPLE_KERNEL_INSTANTIATIONS:BOOL=OFF
+
+//Whether to enable relocatable device code (RDC) for HIP
+Kokkos_ENABLE_HIP_RELOCATABLE_DEVICE_CODE:BOOL=OFF
+
+//Whether to build HPX backend (experimental)
+Kokkos_ENABLE_HPX:BOOL=OFF
+
+//Whether to enable the HWLOC library
+Kokkos_ENABLE_HWLOC:BOOL=Off
+
+//CUDA asynchronous malloc support
+Kokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC:BOOL=OFF
+
+//Whether to leverage unified memory architectures for CUDA
+Kokkos_ENABLE_IMPL_CUDA_UNIFIED_MEMORY:BOOL=OFF
+
+//Whether to enable hipMallocAsync
+Kokkos_ENABLE_IMPL_HIP_MALLOC_ASYNC:BOOL=OFF
+
+//Whether HPX supports asynchronous dispatch
+Kokkos_ENABLE_IMPL_HPX_ASYNC_DISPATCH:BOOL=OFF
+
+//Whether to enable experimental mdspan support
+Kokkos_ENABLE_IMPL_MDSPAN:BOOL=ON
+
+//Whether to allow nvc++ as Cuda device compiler
+Kokkos_ENABLE_IMPL_NVHPC_AS_DEVICE_COMPILER:BOOL=OFF
+
+//Whether to use the C++20 `[[unlikely]]` attribute in the view
+// reference counting
+Kokkos_ENABLE_IMPL_REF_COUNT_BRANCH_UNLIKELY:BOOL=ON
+
+//BOOL
+Kokkos_ENABLE_IMPL_SKIP_COMPILER_MDSPAN:BOOL=ON
+
+//Whether to enable a workaround for invalid use of View of Views
+// that causes program hang on destruction.
+Kokkos_ENABLE_IMPL_VIEW_OF_VIEWS_DESTRUCTOR_PRECONDITION_VIOLATION_WORKAROUND:BOOL=OFF
+
+//Whether to perform extra large memory tests
+Kokkos_ENABLE_LARGE_MEM_TESTS:BOOL=OFF
+
+//Whether to enable the LIBDL library
+Kokkos_ENABLE_LIBDL:BOOL=On
+
+//Whether to enable the LIBQUADMATH library
+Kokkos_ENABLE_LIBQUADMATH:BOOL=OFF
+
+//BOOL
+Kokkos_ENABLE_MDSPAN_EXTERNAL:BOOL=OFF
+
+//Whether to enable the ONEDPL library
+Kokkos_ENABLE_ONEDPL:BOOL=OFF
+
+//Whether to build the OpenACC backend
+Kokkos_ENABLE_OPENACC:BOOL=OFF
+
+//Whether to force to use host as a target device for OpenACC
+Kokkos_ENABLE_OPENACC_FORCE_HOST_AS_DEVICE:BOOL=OFF
+
+Kokkos_ENABLE_OPENMP:STRING=OFF
+
+//Whether to build the OpenMP target backend
+Kokkos_ENABLE_OPENMPTARGET:BOOL=OFF
+
+//Whether to enable the ROCM library
+Kokkos_ENABLE_ROCM:BOOL=OFF
+
+//Whether to enable the ROCTHRUST library
+Kokkos_ENABLE_ROCTHRUST:BOOL=OFF
+
+//Whether to build serial backend
+Kokkos_ENABLE_SERIAL:BOOL=ON
+
+//Whether to build SYCL backend
+Kokkos_ENABLE_SYCL:BOOL=OFF
+
+//Whether to enable relocatable device code (RDC) for SYCL
+Kokkos_ENABLE_SYCL_RELOCATABLE_DEVICE_CODE:BOOL=OFF
+
+//Whether to build the unit tests
+Kokkos_ENABLE_TESTS:BOOL=OFF
+
+//Whether to build C++ threads backend
+Kokkos_ENABLE_THREADS:BOOL=OFF
+
+//Whether to create bindings for tuning tools
+Kokkos_ENABLE_TUNING:BOOL=OFF
+
+//Whether to allow architectures in backends Kokkos doesn't optimize
+// for
+Kokkos_ENABLE_UNSUPPORTED_ARCHS:BOOL=OFF
+
+//Location of HPX library
+Kokkos_HPX_DIR:PATH=
+
+//Location of HWLOC library
+Kokkos_HWLOC_DIR:PATH=
+
+//Set compiler flags for AMD GPUs
+Kokkos_IMPL_AMDGPU_FLAGS:STRING=
+
+//Set linker flags for AMD GPUs
+Kokkos_IMPL_AMDGPU_LINK:STRING=
+
+//Value Computed by CMake
+Kokkos_IS_TOP_LEVEL:STATIC=OFF
+
+//Location of LIBDL library
+Kokkos_LIBDL_DIR:PATH=
+
+//Location of LIBQUADMATH library
+Kokkos_LIBQUADMATH_DIR:PATH=
+
+//Path to a program.
+Kokkos_NVCC_WRAPPER:FILEPATH=/common/home/rvk22/opt/sparta/lib/kokkos/bin/nvcc_wrapper
+
+//Location of ONEDPL library
+Kokkos_ONEDPL_DIR:PATH=
+
+//Location of ROCM library
+Kokkos_ROCM_DIR:PATH=
+
+//Location of ROCTHRUST library
+Kokkos_ROCTHRUST_DIR:PATH=
+
+//Value Computed by CMake
+Kokkos_SOURCE_DIR:STATIC=/common/home/rvk22/opt/sparta/lib/kokkos
+
+//Location of THREADS library
+Kokkos_THREADS_DIR:PATH=
+
+//Path to a file.
+LIBDL_INCLUDE_DIRS:PATH=/usr/include
+
+//Command to build the project
+MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+//Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=/usr/bin/valgrind
+
+//File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Executable for running MPI programs.
 MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/mpiexec
@@ -335,16 +988,19 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Enable or disable sparta fft package. Default: OFF.
-PKG_FFT:BOOL=OFF
+PKG_FFT:BOOL=ON
 
 //Enable or disable sparta kokkos package. Default: OFF.
-PKG_KOKKOS:BOOL=OFF
+PKG_KOKKOS:BOOL=ON
 
 //Enable or disable sparta mpi stubs package. Default: OFF.
 PKG_MPI_STUBS:BOOL=OFF
 
 //Enable or disable sparta python package. Default: OFF.
 PKG_PYTHON:BOOL=OFF
+
+//Name of the computer/site where compile is being run
+SITE:STRING=crayon.cs.rutgers.edu
 
 //Value Computed by CMake
 SPARTA_BINARY_DIR:STATIC=/common/home/rvk22/opt/sparta/build-gpu
@@ -408,6 +1064,9 @@ SPARTA_SOURCE_DIR:STATIC=/common/home/rvk22/opt/sparta/cmake
 //Additional arguments for the sparta binary. Default: OFF
 SPARTA_SPA_ARGS:BOOL=OFF
 
+//Path to a library.
+dl_LOCATION:FILEPATH=/usr/lib/x86_64-linux-gnu/libdl.a
+
 
 ########################
 # INTERNAL cache entries
@@ -431,6 +1090,8 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
+//ADVANCED property for variable: CMAKE_CTEST_COMMAND
+CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -449,6 +1110,7 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+CMAKE_CXX_STANDARD_DEFAULT:INTERNAL=98
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
@@ -491,11 +1153,45 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/common/home/rvk22/opt/sparta/cmake
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
+CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
+CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -513,7 +1209,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -558,12 +1254,225 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_COMMAND
+COVERAGE_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
+COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
+CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
+CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDAToolkit_BIN_DIR
+CUDAToolkit_BIN_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDAToolkit_CUPTI_INCLUDE_DIR
+CUDAToolkit_CUPTI_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDAToolkit_NVCC_EXECUTABLE
+CUDAToolkit_NVCC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDAToolkit_rt_LIBRARY
+CUDAToolkit_rt_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_CUDART
+CUDA_CUDART-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_OpenCL_LIBRARY
+CUDA_OpenCL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cuFile_LIBRARY
+CUDA_cuFile_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cuFile_rdma_LIBRARY
+CUDA_cuFile_rdma_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cuFile_rdma_static_LIBRARY
+CUDA_cuFile_rdma_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cuFile_static_LIBRARY
+CUDA_cuFile_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublasLt_LIBRARY
+CUDA_cublasLt_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublasLt_static_LIBRARY
+CUDA_cublasLt_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublas_LIBRARY
+CUDA_cublas_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cublas_static_LIBRARY
+CUDA_cublas_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cuda_driver_LIBRARY
+CUDA_cuda_driver_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cudart_LIBRARY
+CUDA_cudart_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cudart_static_LIBRARY
+CUDA_cudart_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cudla_LIBRARY
+CUDA_cudla_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_LIBRARY
+CUDA_cufft_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_static_LIBRARY
+CUDA_cufft_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufft_static_nocallback_LIBRARY
+CUDA_cufft_static_nocallback_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufftw_LIBRARY
+CUDA_cufftw_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cufftw_static_LIBRARY
+CUDA_cufftw_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_culibos_LIBRARY
+CUDA_culibos_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cupti_LIBRARY
+CUDA_cupti_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cupti_static_LIBRARY
+CUDA_cupti_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_curand_LIBRARY
+CUDA_curand_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_curand_static_LIBRARY
+CUDA_curand_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_LIBRARY
+CUDA_cusolver_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_lapack_static_LIBRARY
+CUDA_cusolver_lapack_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_metis_static_LIBRARY
+CUDA_cusolver_metis_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusolver_static_LIBRARY
+CUDA_cusolver_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusparse_LIBRARY
+CUDA_cusparse_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_cusparse_static_LIBRARY
+CUDA_cusparse_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppc_LIBRARY
+CUDA_nppc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppc_static_LIBRARY
+CUDA_nppc_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppial_LIBRARY
+CUDA_nppial_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppial_static_LIBRARY
+CUDA_nppial_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicc_LIBRARY
+CUDA_nppicc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicc_static_LIBRARY
+CUDA_nppicc_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicom_LIBRARY
+CUDA_nppicom_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppicom_static_LIBRARY
+CUDA_nppicom_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppidei_LIBRARY
+CUDA_nppidei_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppidei_static_LIBRARY
+CUDA_nppidei_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppif_LIBRARY
+CUDA_nppif_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppif_static_LIBRARY
+CUDA_nppif_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppig_LIBRARY
+CUDA_nppig_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppig_static_LIBRARY
+CUDA_nppig_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppim_LIBRARY
+CUDA_nppim_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppim_static_LIBRARY
+CUDA_nppim_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppist_LIBRARY
+CUDA_nppist_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppist_static_LIBRARY
+CUDA_nppist_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppisu_LIBRARY
+CUDA_nppisu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppisu_static_LIBRARY
+CUDA_nppisu_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppitc_LIBRARY
+CUDA_nppitc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nppitc_static_LIBRARY
+CUDA_nppitc_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_npps_LIBRARY
+CUDA_npps_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_npps_static_LIBRARY
+CUDA_npps_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvJitLink_LIBRARY
+CUDA_nvJitLink_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvJitLink_static_LIBRARY
+CUDA_nvJitLink_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvToolsExt_LIBRARY
+CUDA_nvToolsExt_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvgraph_LIBRARY
+CUDA_nvgraph_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvgraph_static_LIBRARY
+CUDA_nvgraph_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvjpeg_LIBRARY
+CUDA_nvjpeg_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvjpeg_static_LIBRARY
+CUDA_nvjpeg_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvml_LIBRARY
+CUDA_nvml_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvperf_host_LIBRARY
+CUDA_nvperf_host_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvperf_host_static_LIBRARY
+CUDA_nvperf_host_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvperf_target_LIBRARY
+CUDA_nvperf_target_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvptxcompiler_static_LIBRARY
+CUDA_nvptxcompiler_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvrtc_LIBRARY
+CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvrtc_builtins_LIBRARY
+CUDA_nvrtc_builtins_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvrtc_builtins_static_LIBRARY
+CUDA_nvrtc_builtins_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_nvrtc_static_LIBRARY
+CUDA_nvrtc_static_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CUDA_pcsamplingutil_LIBRARY
+CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DART_TESTING_TIMEOUT
+DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding CUDAToolkit
+FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit:INTERNAL=[/usr/local/cuda-12.6/targets/x86_64-linux/include][/usr/local/cuda-12.6/lib64/libcudart.so][/usr/local/cuda-12.6/bin][v12.6.85()]
 //Details about finding MPI
 FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][c ][v3.1()]
 //Details about finding MPI_C
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so][mpi][/usr/lib/x86_64-linux-gnu/openmpi/include][TRUE][v3.1()]
 //Details about finding MPI_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so][/usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so][mpi_cxx;mpi][/usr/lib/x86_64-linux-gnu/openmpi/include][TRUE][v3.1()]
+//Details about finding TPLLIBDL
+FIND_PACKAGE_MESSAGE_DETAILS_TPLLIBDL:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libdl.a][v()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+KOKKOS_AMDGPU_OPTIONS:INTERNAL=
+KOKKOS_CFG_DAG_ARCH:INTERNAL=On
+KOKKOS_CFG_DAG_COMPILER_ID:INTERNAL=On
+KOKKOS_CFG_DAG_CXX_STD:INTERNAL=On
+KOKKOS_CFG_DAG_DEVICES:INTERNAL=On
+KOKKOS_CFG_DAG_OPTIONS:INTERNAL=On
+KOKKOS_CFG_DAG_TPLS:INTERNAL=On
+//Have include experimental/mdspan
+KOKKOS_COMPILER_SUPPORTS_EXPERIMENTAL_MDSPAN:INTERNAL=
+//Have include mdspan
+KOKKOS_COMPILER_SUPPORTS_MDSPAN:INTERNAL=
+KOKKOS_COMPILE_DEFINITIONS:INTERNAL=KOKKOS_DEPENDENCE
+KOKKOS_COMPILE_OPTIONS:INTERNAL=
+KOKKOS_CUDAFE_OPTIONS:INTERNAL=
+KOKKOS_CUDA_OPTIONS:INTERNAL=-extended-lambda;-Wext-lambda-captures-this;-arch=sm_89
+KOKKOS_CXX_STANDARD_FEATURE:INTERNAL=cxx_std_17
+KOKKOS_DONT_ALLOW_EXTENSIONS:INTERNAL=CUDA enabled
+KOKKOS_LINK_OPTIONS:INTERNAL=-DKOKKOS_DEPENDENCE;-arch=sm_89
+KOKKOS_XCOMPILER_OPTIONS:INTERNAL=
+//ADVANCED property for variable: Kokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC
+Kokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_ENABLE_IMPL_MDSPAN
+Kokkos_ENABLE_IMPL_MDSPAN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_ENABLE_IMPL_REF_COUNT_BRANCH_UNLIKELY
+Kokkos_ENABLE_IMPL_REF_COUNT_BRANCH_UNLIKELY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_ENABLE_IMPL_SKIP_COMPILER_MDSPAN
+Kokkos_ENABLE_IMPL_SKIP_COMPILER_MDSPAN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_ENABLE_IMPL_VIEW_OF_VIEWS_DESTRUCTOR_PRECONDITION_VIOLATION_WORKAROUND
+Kokkos_ENABLE_IMPL_VIEW_OF_VIEWS_DESTRUCTOR_PRECONDITION_VIOLATION_WORKAROUND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_ENABLE_MDSPAN_EXTERNAL
+Kokkos_ENABLE_MDSPAN_EXTERNAL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_IMPL_AMDGPU_FLAGS
+Kokkos_IMPL_AMDGPU_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Kokkos_IMPL_AMDGPU_LINK
+Kokkos_IMPL_AMDGPU_LINK-ADVANCED:INTERNAL=1
+//Whether to build tests and examples against installation
+Kokkos_INSTALL_TESTING:INTERNAL=OFF
+//ADVANCED property for variable: LIBDL_INCLUDE_DIRS
+LIBDL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MAKECOMMAND
+MAKECOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_COMMAND
+MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
+MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_EXECUTABLE
 MPIEXEC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
@@ -622,6 +1531,18 @@ MPI_mpi_cxx_LIBRARY-ADVANCED:INTERNAL=1
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SITE
+SITE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+//Result of TRY_COMPILE
+_COMPILE_RESULT:INTERNAL=TRUE
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Result of try_run()
+_RESULT:INTERNAL=0
+//CUDAToolkit internal list of implicit link directories
+_cmake_CUDAToolkit_implicit_link_directories:INTERNAL=/usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs;/usr/local/cuda-12.6/targets/x86_64-linux/lib
+//CUDAToolkit internal list of include directories
+_cmake_CUDAToolkit_include_directories:INTERNAL=/usr/local/cuda-12.6/targets/x86_64-linux/include
 
