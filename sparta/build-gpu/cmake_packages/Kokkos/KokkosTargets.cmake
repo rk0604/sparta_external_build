@@ -1,0 +1,1 @@
+include(/common/home/rvk22/opt/sparta/build-gpu/src/KOKKOS/lib/kokkos/KokkosTargets.cmake)

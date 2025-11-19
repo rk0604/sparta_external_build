@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpkg_fft.a CMakeFiles/pkg_fft.dir/compute_fft_grid.cpp.o CMakeFiles/pkg_fft.dir/fft2d.cpp.o CMakeFiles/pkg_fft.dir/fft2d_wrap.cpp.o CMakeFiles/pkg_fft.dir/fft3d.cpp.o CMakeFiles/pkg_fft.dir/fft3d_wrap.cpp.o CMakeFiles/pkg_fft.dir/remap2d.cpp.o CMakeFiles/pkg_fft.dir/remap3d.cpp.o
+/usr/bin/ranlib libpkg_fft.a
